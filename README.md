@@ -37,7 +37,8 @@ FindingFishBookは、任天堂のゲームソフト『あつまれ どうぶつ�
     * コメント(必須)
     * この魚と出会った水族館と日付(必須。展示期間があるかもしれないため。出会った水族館も事前にデータ登録しておき選択方式にする)
     * 魚の写真(任意)
-		  ※ImageMagick,RMagick,CarrierWaveを利用予定。
+		* CarrierWave、MiniMagickを利用予定。画像のリサイズと、画像データの容量制限を行います。
+        * Google Cloud Vision APIを導入し、投稿時に魚の画像か否かを診断。魚以外の画像投稿を防ぎます。
     * 魚詳細
 	    * 魚登録と同じ項目
 * 水族館管理
@@ -64,9 +65,12 @@ FindingFishBookは、任天堂のゲームソフト『あつまれ どうぶつ�
     * Rails：こちらも最新安定バージョン(v.7.1.1でしょうか)を使用予定です。
     ただしv6とv7で変更点が多々あるようなので、v7が難しいと判断したらv6の最新バージョンにする予定です。
 * その他使用予定gem
-    * ImageMagick,RMagick,CarrierWave：最新安定バージョンを使用予定。魚の写真投稿用です。
+    * CarrierWave、MiniMagick：最新安定バージョンを使用予定。魚の画像投稿用です。
     * Google Maps PlatformもしくはGeocoder：最新安定バージョンを使用予定。水族館マップ用です。
     * Bootstrap：最新安定バージョンを使用予定。
+* API
+    * Google Cloud Vision API：魚の画像診断用です。
+        https://cloud.google.com/vision?hl=ja
 * フロントエンド
     * 検討中です。ただ少し調べたところVue.jsが比較的容易に導入できそうなため、候補に入れています。
 * デプロイ先：Herokuを検討しています。
