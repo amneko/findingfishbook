@@ -74,3 +74,6 @@ FindingFishBookは、任天堂のゲームソフト『あつまれ どうぶつ�
 * フロントエンド
     * 検討中です。ただ少し調べたところVue.jsが比較的容易に導入できそうなため、候補に入れています。
 * デプロイ先：Herokuを検討しています。
+
+## 画面遷移図
+https://www.figma.com/file/kGh9r9aQPY11DUCgklfxt3/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?type=design&node-id=0%3A1&mode=design&t=FtXanWWSryexNmY2-1
