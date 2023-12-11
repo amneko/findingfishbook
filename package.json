@@ -1,0 +1,22 @@
+{
+  "name": "findingfishbook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:amneko/findingfishbook.git",
+  "author": "miura",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.4",
+    "esbuild": "^0.19.8",
+    "sass": "^1.69.5"
+  },
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0",
+    "yarn": "1.22.19"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
+    "build:css": "sass ./app/assets/stylesheets/application.bulma.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  }
+}
