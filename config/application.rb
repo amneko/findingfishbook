@@ -38,5 +38,11 @@ module Findingfishbook
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # 日本語環境設定
+    config.time_zone = "Tokyo"
+    config.i18n.default_locale = :ja
+    config.i18n.available_locales = %i[ja en]
+    config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
   end
 end
