@@ -1,0 +1,22 @@
+<header id='header' class='header'>
+  <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <%= link_to 'Finding Fish Book', root_path, class: 'navbar-item has-text-white has-text-weight-bold has-text-info has-text-white-bis', style: 'transition: color 0.3s;' %>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <%= link_to 'ホーム', root_path, class: 'navbar-item has-text-white' %>
+          <%= link_to '投稿一覧', '#', class: 'navbar-item has-text-white' %>
+          <%= link_to '魚一覧', '#', class: 'navbar-item has-text-white' %>
+          <%= link_to '水族館一覧', '#', class: 'navbar-item has-text-white' %>
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <%= link_to "ログイン", login_path, class: 'button is-light' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
