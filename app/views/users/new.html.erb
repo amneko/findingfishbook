@@ -1,41 +1,44 @@
-<div class="container">
-  <div class="columns is-centered">
-    <div class="column is-8">
-      <h1 class="title is-2 has-text-centered">ユーザー登録</h1>
-      <%= form_with(model: @user, local: true, class: 'box') do |f| %>
-        <div class="field">
-          <%= f.label :name, class: 'label' %>
-          <div class="control">
-            <%= f.text_field :name, class: 'input' %>
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <h1 class="title is-2 has-text-centered">ユーザー登録</h1>
+        <%= render 'shared/error_messages', { object: @user } %>
+        <%= form_with model: @user, local: true, class: 'box' do |f| %>
+          <div class="field">
+            <%= f.label :name, class: 'label' %>
+            <div class="control">
+              <%= f.text_field :name, class: 'input' %>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <%= f.label :email, class: 'label' %>
-          <div class="control">
-            <%= f.text_field :email, class: 'input' %>
+          <div class="field">
+            <%= f.label :email, class: 'label' %>
+            <div class="control">
+              <%= f.text_field :email, class: 'input' %>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <%= f.label :password, class: 'label' %>
-          <div class="control">
-            <%= f.password_field :password, class: 'input' %>
+          <div class="field">
+            <%= f.label :password, class: 'label' %>
+            <div class="control">
+              <%= f.password_field :password, class: 'input' %>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <%= f.label :password_confirmation, class: 'label' %>
-          <div class="control">
-            <%= f.password_field :password_confirmation, class: 'input' %>
+          <div class="field">
+            <%= f.label :password_confirmation, class: 'label' %>
+            <div class="control">
+              <%= f.password_field :password_confirmation, class: 'input' %>
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <div class="control">
-            <%= f.submit "登録", class: 'button is-primary' %>
+          <div class="field">
+            <div class="control">
+              <%= f.submit "登録", class: 'button is-info' %>
+            </div>
           </div>
+        <% end %>
+        <div class="has-text-centered">
+          <%= link_to "ログイン", login_path, class: 'has-text-info' %>
         </div>
-      <% end %>
-      <div class="has-text-centered">
-        <a href="/login">ログイン</a>
       </div>
     </div>
   </div>
-</div>
+</section>
