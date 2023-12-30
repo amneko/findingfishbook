@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_28_152415) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_28_141528) do
   create_table "aquariums", force: :cascade do |t|
     t.string "name", null: false
     t.integer "prefecture_id", null: false
