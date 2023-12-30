@@ -7,12 +7,12 @@ require "csv"
 #   )
 # end
 
-# 水族館のテストデータ作成
-CSV.foreach('db/csv/aquarium.csv', headers: true) do |row|
-  Aquarium.create(
-    name: row['name'],
-    prefecture_id: row['prefecture_id'],
-    address: row['address'],
-    website: row['website']
-  )
-end
+# # 水族館のテストデータ作成
+# CSV.foreach('db/csv/aquarium.csv', headers: true) do |row|
+#   Aquarium.create(
+#     name: row['name'],
+#     prefecture_id: row['prefecture_id'],
+#     address: row['address'],
+#     website: row['website']
+#   )
+# end
