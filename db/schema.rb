@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_21_135619) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_28_152415) do
+  create_table "aquariums", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "prefecture_id", null: false
+    t.string "address", null: false
+    t.string "website"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["prefecture_id"], name: "index_aquariums_on_prefecture_id"
+  end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
@@ -25,4 +41,5 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_21_135619) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "aquariums", "prefectures"
 end
