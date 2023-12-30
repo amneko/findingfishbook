@@ -6,6 +6,7 @@
   "author": "miura",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
     "bulma": "^0.9.4",
     "esbuild": "^0.19.8",
     "sass": "^1.69.5"

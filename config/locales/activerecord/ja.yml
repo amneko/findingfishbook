@@ -2,3 +2,9 @@ ja:
   activerecord:
     models:
       aquarium: '水族館'
+      fish: '魚'
+      location: '出現場所'
+    attributes:
+      fish:
+        selling_price_tanuki: '売値(たぬき商店)'
+        selling_price_justin: '売値(ジャスティン)'

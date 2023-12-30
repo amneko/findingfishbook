@@ -1,0 +1,31 @@
+<div class="column is-one-third" >
+  <div class="card">
+    <header class="card-header">
+      <button class="card-header-icon" aria-label="icon">
+        <span class="icon">
+          <i class="fa-regular fa-id-card" aria-hidden="true"></i>
+        </span>
+      </button>
+      <p class="card-header-title is-centered">
+        <%= link_to fish.name, fish_path(fish) %>
+      </p>
+      <button class="card-header-icon" aria-label="angle-down">
+        <span class="icon">
+          <i class="fas fa-angle-down" aria-hidden="true"></i>
+        </span>
+      </button>
+    </header>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag 'no_image_fish.png' %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="content">
+        <p><%= t('activerecord.models.location') %> : <%= fish.location.name %></p>
+        <p><%= t('activerecord.attributes.fish.selling_price_tanuki') %> : <%= fish.selling_price_tanuki %></p>
+        <p><%= t('activerecord.attributes.fish.selling_price_justin') %> : <%= fish.selling_price_justin %></p>
+      </div>
+    </div>
+  </div>
+</div>
