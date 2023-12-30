@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_28_141528) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_30_125113) do
   create_table "aquariums", force: :cascade do |t|
     t.string "name", null: false
     t.integer "prefecture_id", null: false
@@ -19,6 +19,41 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_28_141528) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["prefecture_id"], name: "index_aquariums_on_prefecture_id"
+  end
+
+  create_table "fishes", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "location_id", null: false
+    t.integer "selling_price_tanuki", null: false
+    t.integer "selling_price_justin", null: false
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["location_id"], name: "index_fishes_on_location_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "north_appearances", force: :cascade do |t|
+    t.integer "fish_id", null: false
+    t.string "north_month", null: false
+    t.string "latenight_starttime"
+    t.string "latenight_endtime"
+    t.string "morning_starttime"
+    t.string "morning_endtime"
+    t.string "noon_starttime"
+    t.string "noon_endtime"
+    t.string "evening_starttime"
+    t.string "evening_endtime"
+    t.string "night_starttime"
+    t.string "night_endtime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fish_id"], name: "index_north_appearances_on_fish_id"
   end
 
   create_table "prefectures", force: :cascade do |t|
@@ -42,4 +77,6 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_28_141528) do
   end
 
   add_foreign_key "aquariums", "prefectures"
+  add_foreign_key "fishes", "locations"
+  add_foreign_key "north_appearances", "fishes"
 end
