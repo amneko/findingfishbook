@@ -1,11 +1,11 @@
 require "csv"
 
-# # 都道府県のテストデータ作成
-# CSV.foreach('db/csv/prefecture.csv', headers: true) do |row|
-#   Prefecture.create(
-#     name: row['name']
-#   )
-# end
+# 都道府県のテストデータ作成
+CSV.foreach('db/csv/prefecture.csv', headers: true) do |row|
+  Prefecture.create(
+    name: row['name']
+  )
+end
 
 # # 水族館のテストデータ作成
 # CSV.foreach('db/csv/aquarium.csv', headers: true) do |row|
