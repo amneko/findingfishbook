@@ -1,0 +1,74 @@
+id,name,prefecture_id,address,website
+1,おたる水族館,1,北海道小樽市祝津3-303,https://otaru-aq.jp/
+2,新さっぽろサンピアザ水族館,1,北海道札幌市厚別区厚別中央二条5-7-5,https://www.sunpiazza-aquarium.com/
+3,登別マリンパークニクス,1,北海道登別市登別東町1-22,https://www.nixe.co.jp/
+4,サケのふるさと千歳水族館,1,北海道千歳市花園2-312,https://chitose-aq.jp/
+5,青森県営浅虫水族館,2,青森県青森市大字浅虫字馬場山1-25,https://asamushi-aqua.com/
+6,久慈地下水族科学館もぐらんぴあ,3,岩手県久慈市侍浜町麦生1-43-7,https://www.moguranpia.com/
+7,仙台うみの杜水族館,4,宮城県仙台市宮城野区中野4丁目6番地,https://www.uminomori.jp/umino/index.html
+8,男鹿水族館GAO,5,秋田県男鹿市戸賀塩浜字壺ケ沢93番地先,https://www.gao-aqua.jp/
+9,鶴岡市立加茂水族館,6,山形県鶴岡市大字今泉字大久保657-1,https://kamo-kurage.jp/
+10,アクアマリンふくしま,7,福島県いわき市小名浜字辰巳町50番地,https://www.aquamarine.or.jp/
+11,アクアマリンいなわしろカワセミ水族館,7,福島県耶麻郡猪苗代町大字長田字東中丸3447-4,https://www.aquamarine.or.jp/kawasemi/
+12,アクアワールド茨城県大洗水族館,8,茨城県東茨城郡大洗町磯浜町8252-3,https://www.aquaworld-oarai.com/
+13,栃木県なかがわ水遊園,9,栃木県大田原市佐良土2686,https://tnap.jp/
+14,道の駅 みなかみ水紀行館 水産学習館,10,群馬県利根郡みなかみ町湯原1681-1,https://mizunofurusato.com/2021/07/suisan-gakusyukan/
+15,さいたま水族館,11,埼玉県羽生市三田ヶ谷751-1,https://www.parks.or.jp/suizokukan/
+16,鴨川シーワールド,12,千葉県鴨川市東町1464-18,https://www.kamogawa-seaworld.jp/
+17,サンシャイン水族館,13,東京都豊島区東池袋3-1-3,https://sunshinecity.jp/aquarium/
+18,葛西臨海水族園,13,東京都江戸川区臨海町6-2-3,https://www.tokyo-zoo.net/zoo/kasai/
+19,しながわ水族館,13,東京都品川区勝島3-2-1,https://www.aquarium.gr.jp/
+20,マクセル アクアパーク品川,13,東京都港区高輪4-10-30,https://www.aqua-park.jp/aqua/index.html
+21,すみだ水族館,13,東京都墨田区押上一丁目1番2号 東京スカイツリータウン・ソラマチ5F・6F,https://www.sumida-aquarium.com/index.html
+22,アートアクアリウム美術館 GINZA,13,東京都中央区銀座4丁目6-16 銀座三越9階,https://artaquarium.jp/
+23,カワスイ 川崎水族館,14,神奈川県川崎市川崎区日進町1-11 川崎ルフロン10階,https://kawa-sui.com/
+24,横浜･八景島シーパラダイス,14,神奈川県横浜市金沢区八景島,https://www.seaparadise.co.jp/index.html
+25,新江ノ島水族館,14,神奈川県藤沢市片瀬海岸2丁目19番1号,https://www.enosui.com/
+26,新潟市水族館マリンピア日本海,15,新潟県新潟市中央区西船見町5932-445,https://www.marinepia.or.jp/
+27,上越市立水族博物館 うみがたり,15,新潟県上越市五智2-15-15,https://www.umigatari.jp/joetsu/
+28,長岡市寺泊水族博物館,15,新潟県長岡市寺泊花立9353-158,https://aquarium-teradomari.jp/
+29,魚津水族館,16,富山県魚津市三ケ1390,https://www.uozu-aquarium.jp/
+30,のとじま臨海公園水族館,17,石川県七尾市能登島曲町15-40,https://www.notoaqua.jp/
+31,越前松島水族館,18,福井県坂井市三国町崎74-2-3,https://www.echizen-aquarium.com/
+32,山梨県立富士湧水の里水族館,19,山梨県南都留郡忍野村忍草3098-1,http://www.morinonakano-suizokukan.com/index.html
+33,蓼科アミューズメント水族館,20,長野県茅野市北山4035-2409,https://www.tateshina-aquarium.jp/
+34,世界淡水魚園水族館 アクア・トト ぎふ,21,岐阜県各務原市川島笠田町1453,https://aquatotto.com/
+35,東海大学海洋科学博物館,22,静岡県静岡市清水区三保2389,https://www.umi.muse-tokai.jp/
+36,下田海中水族館,22,静岡県下田市三丁目22-31,https://shimoda-aquarium.com/
+37,伊豆・三津シーパラダイス,22,静岡県沼津市内浦長浜3-1,https://www.mitosea.com/
+38,沼津港深海水族館,22,静岡県沼津市千本港町83番地,http://www.numazu-deepsea.com/
+39,名古屋港水族館,23,愛知県名古屋市港区港町1-3,https://nagoyaaqua.jp/
+40,碧南海浜水族館,23,愛知県碧南市浜町2-3,https://www.city.hekinan.lg.jp/aquarium/index.html
+41,SEA LIFE 名古屋,23,愛知県名古屋市港区金城ふ頭2-7-1,https://www.legoland.jp/resort-guide/sealife-nagoya/
+42,鳥羽水族館,24,三重県鳥羽市鳥羽3-3-6,https://aquarium.co.jp/
+43,伊勢シーパラダイス（伊勢夫婦岩ふれあい水族館シーパラダイス）,24,三重県伊勢市二見町江580,https://ise-seaparadise.com/
+44,滋賀県立琵琶湖博物館,25,滋賀県草津市下物町1091,https://www.biwahaku.jp/
+45,京都水族館,26,京都府京都市下京区観喜寺町35番地の1,https://www.kyoto-aquarium.com/index.html
+46,海遊館,27,大阪府大阪市港区海岸通1-1-10,https://www.kaiyukan.com/
+47,NIFREL（ニフレル）,27,大阪府吹田市千里万博公園2-1 EXPOCITY内 ニフレル,https://www.nifrel.jp/
+48,átoa（アトア）,28,兵庫県神戸市中央区新港町7番2号,https://atoa-kobe.jp/
+49,城崎マリンワールド,28,兵庫県豊岡市瀬戸1090,https://marineworld.hiyoriyama.co.jp/
+50,姫路市立水族館,28,兵庫県姫路市西延末440,https://www.city.himeji.lg.jp/aqua/
+51,奈良金魚ミュージアム,29,奈良県奈良市二条大路南1-3-1 ミ・ナーラ4F,https://kingyomuseum.com/
+52,串本海中公園センター,30,和歌山県東牟婁郡串本町有田1157,https://www.kushimoto.co.jp/facilities_aqua.php
+53,とっとり賀露かにっこ館,31,鳥取県鳥取市賀露町西3丁目27-2,https://kanikko.jp/
+54,島根県立しまね海洋館アクアス,32,島根県浜田市久代町1117-2,https://aquas.or.jp/
+55,渋川マリン水族館（玉野海洋博物館）,33,岡山県玉野市渋川2-6-1,https://www.city.tamano.lg.jp/site/kaihaku/
+56,みやじマリン 宮島水族館,34,広島県廿日市市宮島町10-3,https://www.miyajima-aqua.jp/
+57,市立しものせき水族館 海響館,35,山口県下関市あるかぽーと 6番1号,https://www.kaikyokan.com/
+58,日和佐うみがめ博物館カレッタ,36,徳島県海部郡美波町日和佐浦370-4,https://caretta.town.minami.lg.jp/
+59,海洋自然博物館 マリンジャム,36,徳島県海部郡海陽町宍喰浦竹ケ島28-45,https://www.kaiyo-kankou.jp/topics/topics-2300/
+60,四国水族館,37,香川県綾歌郡宇多津町浜一番丁4,https://shikoku-aquarium.jp/
+61,虹の森公園おさかな館,38,愛媛県北宇和郡松野町延野々1510-1,https://morinokuni.or.jp/publics/index/27/
+62,桂浜水族館,39,高知県高知市浦戸778,https://katurahama-aq.jp/
+63,足摺海洋 SATOUMI,39,高知県土佐清水市三崎字今芝4032,https://kaiyoukan.jp/
+64,マリンワールド海の中道,40,福岡県福岡市東区西戸崎18-28,https://marine-world.jp/
+65,長崎ペンギン水族館,42,長崎県長崎市宿町3-16,https://penguin-aqua.jp/
+66,九十九島水族館海きらら,42,長崎県佐世保市鹿子前町1008,https://www.umikirara.jp/
+67,海中水族館シードーナツ,43,熊本県上天草市松島町合津6225-8,https://amakusapearl.com/sea/
+68,大分マリーンパレス水族館「うみたまご」,44,大分県大分市大字神崎字ウト3078-22,https://www.umitamago.jp/
+69,出の山淡水魚水族館,45,宮崎県小林市南西方1091,https://idenoyama-aquarium.weebly.com/
+70,すみえファミリー水族館,45,宮崎県延岡市須美江町1450-2,https://nobekan.jp/activity/play/%E3%81%99%E3%81%BF%E3%81%88%E3%83%95%E3%82%A1%E3%83%9F%E3%83%AA%E3%83%BC%E6%B0%B4%E6%97%8F%E9%A4%A8/
+71,いおワールド かごしま水族館,46,鹿児島県鹿児島市本港新町3-1,https://ioworld.jp/
+72,沖縄美ら海水族館,47,沖縄県国頭郡本部町字石川424,https://churaumi.okinawa/
+73,DMMかりゆし水族館,47,沖縄県豊見城市豊崎3-35,https://kariyushi-aquarium.com/
