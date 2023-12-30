@@ -1,0 +1,20 @@
+<table class="table is-bordered is-striped is-narrow is-hoverable">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th><%= t('defaults.aquarium.name') %></th>
+      <th><%= t('defaults.aquarium.address') %></th>
+      <th><%= t('defaults.aquarium.website') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @aquariums.each_with_index do |aquarium, index| %>
+      <tr>
+        <td><%= index + 1 %></td>
+        <td><%= aquarium.name %></td>
+        <td><%= aquarium.address %></td>
+        <td><%= link_to t('defaults.aquarium.website'), aquarium.website %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
