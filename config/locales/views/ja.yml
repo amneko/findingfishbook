@@ -17,6 +17,10 @@ ja:
       not_updated: 'ユーザーを更新できませんでした'
       not_authorized: '権限がありません'
       delete_confirm: '削除しますか？'
+    aquarium:
+      name: '名前'
+      address: '住所'
+      website: 'Webサイト'
   users:
     new:
       title: 'ユーザー登録'
