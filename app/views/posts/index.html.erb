@@ -1,1 +1,12 @@
-<h1>投稿一覧</h1>
+<section class="section">
+  <div class="container">
+    <p class="has-text-success"><%= notice %></p>
+    <h1 class="title"><%= t('activerecord.models.post') %></h1>
+
+    <div>
+      <% @posts.each do |post| %>
+        <%= render post %>
+      <% end %>
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@ ja:
       aquarium: '水族館'
       fish: '魚'
       location: '出現場所'
-      post: '投稿'
+      post: '投稿一覧'
     attributes:
       fish:
         selling_price_tanuki: '売値(たぬき商店)'
