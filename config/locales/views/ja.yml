@@ -30,3 +30,7 @@ ja:
       title: 'ログイン'
       to_new_user_page: '登録ページへ'
       forgot_password: 'パスワードをお忘れの方はこちら'
+  posts:
+    index:
+      new_post: '新規投稿'
+      show_post: '投稿詳細を見る'

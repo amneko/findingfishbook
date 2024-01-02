@@ -10,8 +10,6 @@ ja:
     destroy:
       success: 'ログアウトしました'
   posts:
-    index:
-      show_post: '投稿詳細を見る'
     create:
       success: '投稿しました'
       fail: '投稿できませんでした'
