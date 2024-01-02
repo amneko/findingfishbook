@@ -14,13 +14,15 @@
 
 <section class="section">
   <div class="container">
-    <div class="columns is-multiline">
-      <% @posts.each do |post| %>
-        <%= render post %>
-      <% end %>
-    </div>
-    <div>
-      <%= paginate @posts %>
-    </div>
+    <%= turbo_frame_tag "posts-list" do %>
+      <div class="columns is-multiline">
+        <% @posts.each do |post| %>
+          <%= render post %>
+        <% end %>
+      </div>
+      <div>
+        <%= paginate @posts %>
+      </div>
+    <% end %>
   </div>
 </section>
