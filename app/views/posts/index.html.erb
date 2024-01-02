@@ -1,0 +1,28 @@
+<section class="section">
+  <div class="container">
+    <div>
+      <p class="has-text-success"><%= notice %></p>
+    </div>
+    <div class="is-pulled-left">
+      <h1 class="title"><%= t('activerecord.models.post') %></h1>
+    </div>
+    <div class="buttons is-pulled-right">
+      <%= link_to (t 'posts.index.new_post'), new_post_path, class: "button is-info" %>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <%= turbo_frame_tag "posts-list" do %>
+      <div class="columns is-multiline">
+        <% @posts.each do |post| %>
+          <%= render post %>
+        <% end %>
+      </div>
+      <div>
+        <%= paginate @posts %>
+      </div>
+    <% end %>
+  </div>
+</section>

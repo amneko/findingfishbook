@@ -1,0 +1,66 @@
+<div class="column is-one-third">
+  <div class="card">
+    <div class="header">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <%= image_tag 'no_image_fish.png' %>
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4"><%= post.user.name %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag 'no_image_fish.png' %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="level is-mobile">
+        <div class="level-left">
+          <div class="level-item has-text-centered">
+            <i class="fa-regular fa-heart"></i>
+            <strong>お気に入り数</strong>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          <%= post.shooting_date %>
+        </p>
+        <div class="buttons">
+          <button class="button is-link is-rounded">
+            <%= link_to post.fish.name, fish_path(post.fish), class: 'has-text-white' %>
+          </button>
+          <button class="button is-link is-rounded">
+            <%= link_to post.aquarium.name, aquarium_path(post.aquarium), class: 'has-text-white' %>
+          </button>
+        </div>
+        <p>
+          <%= link_to (t 'posts.index.show_post'), post, class: "button is-info is-outlined" %>
+        </p>
+      </div>
+    </div>
+    <!-- コメント機能は詳細画面に追加するためコメントアウト -->
+    <% if false %>
+    <div class="card-footer">
+      <div class="columns is-mobile">
+        <div class="column is-11">
+          <div class="field">
+            <div class="control">
+              <input class="input is-medium" type="text" placeholder="Add a comment . . .">
+            </div>
+          </div>
+        </div>
+        <div class="column has-text-centered">
+          <button class="button">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

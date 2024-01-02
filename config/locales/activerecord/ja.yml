@@ -4,7 +4,14 @@ ja:
       aquarium: '水族館'
       fish: '魚'
       location: '出現場所'
+      post: '投稿一覧'
     attributes:
       fish:
         selling_price_tanuki: '売値(たぬき商店)'
         selling_price_justin: '売値(ジャスティン)'
+      post:
+        post_image: '魚の画像'
+        fish_id: '魚' 
+        aquarium_id: '水族館'
+        shooting_date: '撮影日'
+        body: '画像に対するコメント'

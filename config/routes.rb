@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resources :aquariums
   resources :fishes
+  resources :posts
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2023_12_30_125113) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_31_184414) do
   create_table "aquariums", force: :cascade do |t|
     t.string "name", null: false
     t.integer "prefecture_id", null: false
@@ -56,6 +56,20 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_30_125113) do
     t.index ["fish_id"], name: "index_north_appearances_on_fish_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "fish_id", null: false
+    t.integer "aquarium_id", null: false
+    t.string "post_image"
+    t.date "shooting_date"
+    t.string "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["aquarium_id"], name: "index_posts_on_aquarium_id"
+    t.index ["fish_id"], name: "index_posts_on_fish_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "prefectures", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
@@ -79,4 +93,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_30_125113) do
   add_foreign_key "aquariums", "prefectures"
   add_foreign_key "fishes", "locations"
   add_foreign_key "north_appearances", "fishes"
+  add_foreign_key "posts", "aquariums"
+  add_foreign_key "posts", "fishes"
+  add_foreign_key "posts", "users"
 end
