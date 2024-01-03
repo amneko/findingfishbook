@@ -17,23 +17,23 @@ require "csv"
 #   )
 # end
 
-# 出現場所のテストデータ作成
-CSV.foreach('db/csv/location.csv', headers: true) do |row|
-  Location.create(
-    name: row['name']
-  )
-end
-
-# # 魚のテストデータ作成
-# CSV.foreach('db/csv/fish.csv', headers: true) do |row|
-#   Fish.create(
-#     name: row['name'],
-#     location_id: row['location_id'],
-#     selling_price_tanuki: row['selling_price_tanuki'],
-#     selling_price_justin: row['selling_price_justin'],
-#     image: row['image']
+# # 出現場所のテストデータ作成
+# CSV.foreach('db/csv/location.csv', headers: true) do |row|
+#   Location.create(
+#     name: row['name']
 #   )
 # end
+
+# # 魚のテストデータ作成
+CSV.foreach('db/csv/fish.csv', headers: true) do |row|
+  Fish.create(
+    name: row['name'],
+    location_id: row['location_id'],
+    selling_price_tanuki: row['selling_price_tanuki'],
+    selling_price_justin: row['selling_price_justin'],
+    image: row['image']
+  )
+end
 
 # # 出現情報のテストデータ作成
 # CSV.foreach('db/csv/north_appearance.csv', headers: true) do |row|
