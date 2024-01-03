@@ -1,13 +1,13 @@
 require "csv"
 
-# # 都道府県のテストデータ作成
+# # 都道府県のデータ作成
 # CSV.foreach('db/csv/prefecture.csv', headers: true) do |row|
 #   Prefecture.create(
 #     name: row['name']
 #   )
 # end
 
-# # 水族館のテストデータ作成
+# # 水族館のデータ作成
 # CSV.foreach('db/csv/aquarium.csv', headers: true) do |row|
 #   Aquarium.create(
 #     name: row['name'],
@@ -17,14 +17,14 @@ require "csv"
 #   )
 # end
 
-# # 出現場所のテストデータ作成
+# # 出現場所のデータ作成
 # CSV.foreach('db/csv/location.csv', headers: true) do |row|
 #   Location.create(
 #     name: row['name']
 #   )
 # end
 
-# # 魚のテストデータ作成
+# # 魚のデータ作成
 # CSV.foreach('db/csv/fish.csv', headers: true) do |row|
 #   Fish.create(
 #     name: row['name'],
@@ -35,20 +35,20 @@ require "csv"
 #   )
 # end
 
-# 出現情報のテストデータ作成
-CSV.foreach('db/csv/north_appearance.csv', headers: true) do |row|
-  NorthAppearance.create(
-    fish_id: row['fish_id'],
-    north_month: row['north_month'],
-    latenight_starttime: row['latenight_starttime'],
-    latenight_endtime: row['latenight_endtime'],
-    morning_starttime: row['morning_starttime'],
-    morning_endtime: row['morning_endtime'],
-    noon_starttime: row['noon_starttime'],
-    noon_endtime: row['noon_endtime'],
-    evening_starttime: row['evening_starttime'],
-    evening_endtime: row['evening_endtime'],
-    night_starttime: row['night_starttime'],
-    night_endtime: row['night_endtime']
-  )
-end
+# # 出現情報のデータ作成
+# CSV.foreach('db/csv/north_appearance.csv', headers: true) do |row|
+#   NorthAppearance.create(
+#     fish_id: row['fish_id'],
+#     north_month: row['north_month'],
+#     latenight_starttime: row['latenight_starttime'],
+#     latenight_endtime: row['latenight_endtime'],
+#     morning_starttime: row['morning_starttime'],
+#     morning_endtime: row['morning_endtime'],
+#     noon_starttime: row['noon_starttime'],
+#     noon_endtime: row['noon_endtime'],
+#     evening_starttime: row['evening_starttime'],
+#     evening_endtime: row['evening_endtime'],
+#     night_starttime: row['night_starttime'],
+#     night_endtime: row['night_endtime']
+#   )
+# end
