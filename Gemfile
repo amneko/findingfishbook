@@ -65,6 +65,13 @@ gem 'carrierwave'
 # MiniMagick
 gem 'mini_magick'
 
+# AWS用
+gem 'fog-aws'
+gem "aws-sdk-s3", require: false
+
+# 環境変数管理用
+gem 'dotenv-rails'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
