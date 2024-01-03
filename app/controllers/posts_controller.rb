@@ -21,7 +21,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:user_id, :fish_id, :aquarium_id, :post_image, :shooting_date, :body)
+    params.require(:post).permit(:user_id, :fish_id, :aquarium_id, :post_image, :post_image_cache, :shooting_date, :body)
   end
 
 end

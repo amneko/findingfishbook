@@ -20,7 +20,11 @@
   <div class="field">
     <%= form.label :post_image, class: 'label' %>
     <div class="control">
-      <%= form.file_field :post_image %>
+      <%= form.file_field :post_image, accept: 'image/*', id: 'post_image_field' %>
+      <%= form.hidden_field :post_image_cache %>
+      <div class="mt-3 mb-3">
+        <%= image_tag post.post_image.url, id: 'preview', class: 'preview-image', style: 'max-width: 300px; max-height: 200px;' %>
+      </div>
     </div>
   </div>
 
