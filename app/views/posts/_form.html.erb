@@ -23,9 +23,7 @@
       <%= form.file_field :post_image, accept: 'image/*', id: 'post_image_field' %>
       <%= form.hidden_field :post_image_cache %>
       <div class="mt-3 mb-3">
-        <div class="preview-image">
-          <%= image_tag post.post_image.url, id: 'preview' %>
-        </div>
+        <%= image_tag post.post_image.url, id: 'preview', class: 'preview-image' %>
       </div>
     </div>
   </div>
