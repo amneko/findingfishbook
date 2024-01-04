@@ -13,3 +13,4 @@ ja:
     create:
       success: '投稿しました'
       fail: '投稿できませんでした'
+      fish_fail: '魚の画像の投稿をお願いします'
