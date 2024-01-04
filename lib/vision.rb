@@ -3,7 +3,14 @@ require 'json'
 require 'net/https'
 require "google/cloud/vision/v1"
 
-ENV['GOOGLE_APPLICATION_CREDENTIALS']
+keyfile_json_content = ENV['GOOGLE_APPLICATION_CREDENTIALS']
+
+require 'tempfile'
+keyfile = Tempfile.new('google_credentials')
+keyfile.write(keyfile_json_content)
+keyfile.rewind
+
+ENV['GOOGLE_APPLICATION_CREDENTIALS'] = keyfile.path
 
 module Vision
   class << self
@@ -24,3 +31,6 @@ module Vision
     end
   end
 end
+
+keyfile.close
+keyfile.unlink
