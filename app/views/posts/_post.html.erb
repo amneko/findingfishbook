@@ -22,13 +22,12 @@
         <div class="level-left">
           <div class="level-item has-text-centered">
             <i class="fa-regular fa-heart"></i>
-            <strong>お気に入り数</strong>
           </div>
         </div>
       </div>
       <div class="content">
         <p>
-          <%= post.shooting_date %>
+          <%= t('posts.index.shooting_date') %> : <%= post.shooting_date %>
         </p>
         <div class="buttons">
           <button class="button is-link is-rounded">
@@ -39,7 +38,7 @@
           </button>
         </div>
         <p>
-          <%= link_to (t 'posts.index.show_post'), post, class: "button is-info is-outlined" %>
+          <%= link_to t('posts.index.show_post'), post, class: "button is-info is-outlined" %>
         </p>
       </div>
     </div>

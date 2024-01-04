@@ -3,6 +3,7 @@ ja:
     login: 'ログイン'
     register: '登録する'
     update: '更新する'
+    post_register: '投稿する'
     logout: 'ログアウト'
     post: '投稿'
     search_word: '検索ワード'
@@ -34,3 +35,4 @@ ja:
     index:
       new_post: '新規投稿'
       show_post: '投稿詳細を見る'
+      shooting_date: '撮影日'
