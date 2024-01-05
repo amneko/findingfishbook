@@ -8,9 +8,9 @@
     </tr>
   </thead>
   <tbody>
-    <% @aquariums.each_with_index do |aquarium, index| %>
+    <% @aquariums.order(:id).each do |aquarium| %>
       <tr>
-        <td><%= index + 1 %></td>
+        <td><%= aquarium.id %></td>
         <td><%= aquarium.name %></td>
         <td><%= aquarium.address %></td>
         <td><%= link_to t('defaults.aquarium.website'), aquarium.website %></td>
