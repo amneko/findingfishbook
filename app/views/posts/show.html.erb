@@ -1,0 +1,59 @@
+<section class="my-5 mx-5">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-centered is-flex is-align-items-center is-justify-content-center">
+        <%= image_tag @post.post_image_url %>
+      </div>
+      <div class="column">
+        <div class="content">
+          <div class="media is-marginless is-align-items-center">
+            <figure class="media-left is-marginless">
+              <p class="image is-48x48 mx-2">
+                <%= image_tag 'no_image_fish.png', class: "is-rounded" %>
+              </p>
+            </figure>
+            <div class="media-content is-align-items-center">
+              <%= @post.user.name %>
+            </div>
+          </div>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.shooting_date') %> : </strong>
+          <%= @post.shooting_date.strftime('%Y年%m月%d日') %>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.fish_name') %> : </strong>
+          <%= @post.fish.name %>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.encounter_aquarium') %> : </strong>
+          <%= @post.aquarium.name %>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.body') %> : </strong>
+          <%= @post.body %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- コメント機能は一旦コメントアウト -->
+<% if false %>
+<section>
+  <div class="container">
+    <div class="card-footer">
+      <div class="columns is-mobile">
+        <div class="column is-11">
+          <div class="field">
+            <div class="control">
+              <input class="input is-medium" type="text" placeholder="Add a comment . . .">
+            </div>
+          </div>
+        </div>
+        <div class="column has-text-centered">
+          <button class="button">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% end %>

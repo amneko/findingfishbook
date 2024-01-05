@@ -3,6 +3,10 @@ class PostsController < ApplicationController
     @posts = Post.order(created_at: :desc).page(params[:page])
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def new
     @post = Post.new
   end
