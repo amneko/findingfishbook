@@ -1,8 +1,12 @@
-<section class="my-6 mx-6">
+<section class="section">
+  <div class="is-pulled-right ml-1">
+    <%= link_to (t 'defaults.delete'), post_path(@post), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
+  </div>
   <div class="is-pulled-right">
     <%= link_to (t 'defaults.edit'), edit_post_path(@post), class: "button is-info" %>
   </div>
-
+</section>
+<section class="section">
   <div class="container">
     <div class="columns">
       <div class="column has-text-centered is-flex is-align-items-center is-justify-content-center">
