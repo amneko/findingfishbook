@@ -58,7 +58,7 @@
 
   <div class="field">
     <div class="control">
-      <%= form.submit t('defaults.post_register'), class: 'button is-info' %>
+      <%= form.submit action_name == 'new' ? t('defaults.post_register') : t('defaults.update'), class: 'button is-info' %>
     </div>
   </div>
 <% end %>
