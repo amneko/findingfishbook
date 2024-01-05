@@ -14,3 +14,7 @@ ja:
       success: '投稿しました'
       fail: '投稿できませんでした'
       fish_fail: '魚の画像の投稿をお願いします'
+    update:
+      success: '更新しました'
+      fail: '更新できませんでした'
+      fish_fail: '魚の画像の投稿をお願いします'
