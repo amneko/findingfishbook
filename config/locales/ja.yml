@@ -18,3 +18,5 @@ ja:
       success: '更新しました'
       fail: '更新できませんでした'
       fish_fail: '魚の画像の投稿をお願いします'
+    destroy:
+      success: '削除しました'

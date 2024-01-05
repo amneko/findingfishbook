@@ -11,4 +11,8 @@ class User < ApplicationRecord
   validates :like_aquarium, length: { maximum: 30 }
 
   enum role: { general: 0, admin: 1 }
+
+  def own?(object)
+    id == object.user_id
+  end
 end

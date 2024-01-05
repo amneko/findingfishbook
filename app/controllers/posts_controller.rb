@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
   end
 
   def create
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
 
     if params[:post][:post_image].present?
       post_image = File.open(params[:post][:post_image].tempfile)
@@ -69,6 +69,12 @@ class PostsController < ApplicationController
         end
       end
     end
+  end
+
+  def destroy
+    @post = current_user.posts.find(params[:id])
+    @post.destroy!
+    redirect_to posts_path, status: :see_other, success: t('.success')
   end
 
   private
