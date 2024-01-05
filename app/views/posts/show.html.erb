@@ -1,11 +1,14 @@
-<section class="section">
-  <div class="is-pulled-right ml-1">
-    <%= link_to (t 'defaults.delete'), post_path(@post), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
-  </div>
-  <div class="is-pulled-right">
-    <%= link_to (t 'defaults.edit'), edit_post_path(@post), class: "button is-info" %>
-  </div>
-</section>
+<% if current_user.own?(@post) %>
+  <section class="section">
+    <div class="is-pulled-right ml-1">
+      <%= link_to (t 'defaults.delete'), post_path(@post), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
+    </div>
+    <div class="is-pulled-right">
+      <%= link_to (t 'defaults.edit'), edit_post_path(@post), class: "button is-info" %>
+    </div>
+  </section>
+<% end %>
+
 <section class="section">
   <div class="container">
     <div class="columns">
