@@ -21,6 +21,7 @@ ja:
       not_authorized: '権限がありません'
       delete_confirm: '削除しますか？'
     aquarium:
+      info: '水族館情報'
       name: '名前'
       address: '住所'
       website: 'Webサイト'

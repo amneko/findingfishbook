@@ -12,8 +12,15 @@
     <div class="columns">
       <div class="column">
         <div class="content">
-          <h4><%= t('defaults.aquarium.address')%> : <%= @aquarium.address %></h4>
-          <h4><%= link_to t('defaults.aquarium.website'), @aquarium.website %></h4>
+          <h4><%= t('defaults.aquarium.info') %></h4>
+          <ul>
+            <li>
+              <strong><%= t('defaults.aquarium.address')%> : <%= @aquarium.address %></strong>
+            </li>
+            <li>
+              <strong><%= link_to t('defaults.aquarium.website'), @aquarium.website %></strong>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="column">
