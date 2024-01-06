@@ -2,7 +2,7 @@
   <div class="container">
     <div class="content">
       <div class="mt-3 mb-3">
-        <h2><%= @aquarium.name %></h2>
+        <h2><%= @fish.name %></h2>
       </div>
     </div>
   </div>
@@ -10,24 +10,30 @@
 <section class="section">
   <div class="container">
     <div class="columns">
+      <div class="column has-text-centered is-flex is-align-items-center is-justify-content-center">
+        <%= image_tag 'no_image_fish.png' %>
+      </div>
       <div class="column">
         <div class="content">
-          <h4><%= t('defaults.aquarium.info') %></h4>
+          <h4><%= t('defaults.animal_crossing_info') %></h4>
           <ul>
             <li>
-              <strong><%= t('defaults.aquarium.address')%> : <%= @aquarium.address %></strong>
+              <strong><%= t('activerecord.models.location')%> : <%= @fish.location.name %></strong>
             </li>
             <li>
-              <strong><%= link_to t('defaults.aquarium.website'), @aquarium.website %></strong>
+              <strong><%= t('activerecord.attributes.fish.selling_price_tanuki') %> : <%= @fish.selling_price_tanuki %></strong>
+            </li>
+            <li>
+              <strong><%= t('activerecord.attributes.fish.selling_price_justin') %> : <%= @fish.selling_price_justin %></strong>
             </li>
           </ul>
         </div>
       </div>
       <div class="column">
         <div class="content">
-          <h4><%= t('aquariums.show.encounter_fish') %></h4>
-            <% @fish_in_aquarium.each do |fishes| %>
-              <%= link_to fishes.fish.name, fish_path(fishes.fish), class: 'button is-link is-rounded has-text-white'  %>
+          <h4><%= t('fishes.show.encounter_aquarium') %></h4>
+            <% @aquarium_with_fish.each do |aquariums| %>
+              <%= link_to aquariums.aquarium.name, aquarium_path(aquariums.aquarium), class: 'button is-link is-rounded has-text-white'  %>
             <% end %>
         </div>
       </div>
@@ -43,7 +49,7 @@
       </div>
     </div>
     <div class="columns is-multiline">
-      <% @post_with_aquarium.each do |posts| %>
+      <% @post_with_fish.each do |posts| %>
         <div class="column is-one-quarter">
           <div class="card my-4 mx-4">
             <div class="card-image my-3 mx-3">
@@ -53,7 +59,7 @@
             </div>
             <div class="column is-12 featured-content ">
               <h2 class="heading post-category"><%= posts.user.name %></h2>
-              <h2 class="heading post-category"><%= posts.fish.name %></h2>
+              <h2 class="heading post-category"><%= posts.aquarium.name %></h2>
               <%= link_to t('posts.index.show_post'), post_path(posts), class: "button is-small is-info is-outlined" %>
             </div>
           </div>
