@@ -13,6 +13,7 @@ ja:
     password_reset: 'パスワードリセット'
     unspecified: '指定なし'
     everyones_post: 'みんなの投稿'
+    animal_crossing_info: 'あつまれどうぶつの森の情報'
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'
@@ -43,3 +44,6 @@ ja:
   aquariums:
     show:
       encounter_fish: '出会える魚'
+  fishes:
+    show:
+      encounter_aquarium: '出会える水族館'
