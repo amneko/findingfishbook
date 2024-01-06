@@ -12,6 +12,7 @@ ja:
     delete: '削除'
     password_reset: 'パスワードリセット'
     unspecified: '指定なし'
+    everyones_post: 'みんなの投稿'
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'
@@ -39,3 +40,6 @@ ja:
       fish_name: '魚の名前'
       encounter_aquarium: '出会った水族館'
       body: '投稿者コメント'
+  aquariums:
+    show:
+      encounter_fish: '出会える魚'
