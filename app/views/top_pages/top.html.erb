@@ -1,1 +1,86 @@
-<h1>Finding Fish Book</h1>
+<section class="hero is-info is-halfheight is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="columns is-vcentered">
+        <div class="column is-5">
+          <figure class="image is-4by3">
+            <img src="/assets/top.jpg" alt="Top image">
+          </figure>
+        </div>
+        <div class="column is-6 is-offset-1">
+          <h1 class="title is-2">
+            Finding Fish Book
+          </h1>
+          <h2 class="subtitle is-5">
+            本サービスは、実在の水族館で見たあつまれどうぶつの森に出現する魚の写真を投稿・共有するサービスです。
+          </h2>
+        </div>
+      </div>
+    <div>
+  </div>
+</section>
+<section class="hero is-light">
+  <div class="column is-flex is-justify-content-center has-text-centered">
+    <h2 class="title">使用方法</h2>
+  </div>
+  <div class="columns mx-4">
+    <div class="column is-4">
+      <div class="card is-shady">
+        <div class="card-image has-text-centered">
+          <i class="fa-solid fa-images is-size-1 mt-5"></i>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <h4 class="has-text-centered">写真の投稿</h4>
+            <p>
+              水族館で撮影した魚の写真を投稿可能です。<br>
+              魚はあつまれどうぶつの森に出現する魚から選択します。<br>
+              水族館は日本全国の水族館から選択可能です。</p>
+            <p><%= link_to '投稿一覧へ', posts_path, class: 'has-text-link' %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column is-4">
+        <div class="card is-shady">
+            <div class="card-image has-text-centered">
+              <i class="fa-solid fa-fish-fins is-size-1 mt-5"></i>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                  <h4 class="has-text-centered">魚の情報確認</h4>
+                  <p>
+                    あつまれどうぶつの森に出現する魚をまとめています。<br>
+                    各魚の詳細画面では、その魚の投稿や見ることができる水族館を掲載しています。<br>
+                    また、魚に関するゲーム内の情報も掲載しています。
+                  </p>
+                  <%= link_to '魚一覧へ', fishes_path, class: 'has-text-link' %>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-4">
+      <div class="card is-shady">
+          <div class="card-image has-text-centered">
+            <i class="fa-solid fa-city is-size-1 mt-5"></i>
+          </div>
+          <div class="card-content">
+            <div class="content">
+                <h4 class="has-text-centered">水族館の情報確認</h4>
+                <p>
+                  日本全国の水族館情報をまとめています。
+                  写真投稿時に選択する水族館の情報は本一覧のものです。
+                  各水族館の詳細画面では、その水族館で見ることができる魚を掲載しています。
+                </p>
+                <%= link_to '水族館一覧へ', aquariums_path, class: 'has-text-link' %>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="box">
+    <p class="has-text-centered">
+      <span class="tag is-primary">Coming Soon</span> 「あつまれどうぶつの森の北半球で今釣れる魚」を本ページに掲載予定です。
+    </p>
+  </div>
+</section>
