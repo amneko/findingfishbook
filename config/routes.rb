@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :aquariums
   resources :fishes
   resources :posts
+  resource :profile, only: %i[show edit update]
 end

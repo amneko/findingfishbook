@@ -5,6 +5,7 @@ ja:
       fish: '魚'
       location: '出現場所'
       post: '投稿一覧'
+      user: 'ユーザー'
     attributes:
       fish:
         selling_price_tanuki: '売値(たぬき商店)'
@@ -15,3 +16,8 @@ ja:
         aquarium_id: '水族館'
         shooting_date: '撮影日'
         body: '画像に対するコメント'
+      user:
+        name: 'ユーザー名'
+        email: 'メールアドレス'
+        like_fish: '好きな魚'
+        like_aquarium: '好きな水族館'

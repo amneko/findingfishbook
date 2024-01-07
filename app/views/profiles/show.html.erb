@@ -1,0 +1,34 @@
+<section class="section">
+  <div class="is-pulled-right ml-1">
+    <%= link_to (t 'defaults.delete'), '#', data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
+  </div>
+  <div class="is-pulled-right">
+    <%= link_to (t 'defaults.edit'), '#', class: "button is-info" %>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-centered is-flex is-align-items-center is-justify-content-center">
+        <%= image_tag 'sample_icon.png', class: 'is-rounded' %>
+      </div>
+      <div class="column">
+        <div class="content">
+          <div class="media is-marginless is-align-items-center">
+            <div class="media-content is-align-items-center">
+              <strong><%= @user.name %></strong>
+            </div>
+          </div>
+          <hr class="my-2">
+          <strong><%= t('activerecord.attributes.user.like_fish') %> : </strong>
+          <%= @user.like_fish %>
+          <hr class="my-2">
+          <strong><%= t('activerecord.attributes.user.like_aquarium') %> : </strong>
+          <%= @user.like_aquarium %>
+          <hr class="my-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
