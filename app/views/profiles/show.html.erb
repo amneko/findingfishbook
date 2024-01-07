@@ -1,6 +1,6 @@
 <section class="section">
   <div class="is-pulled-right ml-1">
-    <%= link_to (t 'defaults.delete'), '#', data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
+    <%= link_to (t 'defaults.delete'), '/#', data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
   </div>
   <div class="is-pulled-right">
     <%= link_to (t 'defaults.edit'), edit_profile_path, class: "button is-info" %>
@@ -11,7 +11,7 @@
   <div class="container">
     <div class="columns">
       <div class="column has-text-centered is-flex is-justify-content-center">
-        <%= image_tag 'sample_icon.png', class: 'is-rounded' %>
+        <%= image_tag @user.icon_url, class: 'is-rounded' %>
       </div>
       <div class="column">
         <div class="content">

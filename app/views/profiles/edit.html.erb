@@ -18,12 +18,10 @@
           <%= form.label :icon, class: 'label' %>
           <div class="control">
             <%= form.file_field :icon, accept: 'image/*', id: 'post_image_field' %>
-            <% if false %>
             <%= form.hidden_field :icon_cache %>
             <div class="mt-3 mb-3">
-              <%= image_tag @user.icon.url, id: 'preview', class: 'preview-image', style: 'max-width: 300px; max-height: 200px;' %>
+              <%= image_tag @user.icon.url, id: 'preview', class: 'preview-image', style: 'max-width: 150px; max-height: 150px;' %>
             </div>
-            <% end %>
           </div>
         </div>
       
