@@ -51,3 +51,5 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+    update:
+      title: 'ユーザー編集'

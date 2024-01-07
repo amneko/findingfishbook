@@ -1,0 +1,66 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title"><%= t('profiles.update.title')%></h1>
+      <%= form_with model: @user, url: profile_path, local: true, class: 'box' do |form| %>
+        <% if @user.errors.any? %>
+          <div class="notification is-danger">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+            <ul>
+              <% @user.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      
+        <div class="field">
+          <%= form.label :icon, class: 'label' %>
+          <div class="control">
+            <%= form.file_field :icon, accept: 'image/*', id: 'post_image_field' %>
+            <% if false %>
+            <%= form.hidden_field :icon_cache %>
+            <div class="mt-3 mb-3">
+              <%= image_tag @user.icon.url, id: 'preview', class: 'preview-image', style: 'max-width: 300px; max-height: 200px;' %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      
+        <div class="field">
+          <%= form.label :name, class: 'label' %>
+          <div class="control">
+            <%= form.text_field :name %>
+          </div>
+        </div>
+      
+        <div class="field">
+          <%= form.label :email, class: 'label' %>
+          <div class="control">
+            <%= form.email_field :email %>
+          </div>
+        </div>
+      
+        <div class="field">
+          <%= form.label :like_fish, class: 'label' %>
+          <div class="control">
+            <%= form.text_field :like_fish %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :like_aquarium, class: 'label' %>
+          <div class="control">
+            <%= form.text_field :like_aquarium %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <%= form.submit t('defaults.update'), class: 'button is-info' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
