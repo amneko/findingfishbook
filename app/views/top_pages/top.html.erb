@@ -19,8 +19,9 @@
     <div>
   </div>
 </section>
+
 <section class="hero is-light">
-  <div class="column is-flex is-justify-content-center has-text-centered">
+  <div class="box has-text-centered mt-4 mx-4">
     <h2 class="title">使用方法</h2>
   </div>
   <div class="columns mx-4">
@@ -68,8 +69,8 @@
             <div class="content">
                 <h4 class="has-text-centered">水族館の情報確認</h4>
                 <p>
-                  日本全国の水族館情報をまとめています。
-                  写真投稿時に選択する水族館の情報は本一覧のものです。
+                  日本全国の水族館情報をまとめています。<br>
+                  写真投稿時に選択する水族館の情報は本一覧のものです。<br>
                   各水族館の詳細画面では、その水族館で見ることができる魚を掲載しています。
                 </p>
                 <%= link_to '水族館一覧へ', aquariums_path, class: 'has-text-link' %>
@@ -78,9 +79,44 @@
       </div>
     </div>
   </div>
-  <div class="box">
+  <hr>
+  <div class="box mt-4 mx-4">
     <p class="has-text-centered">
-      <span class="tag is-primary">Coming Soon</span> 「あつまれどうぶつの森の北半球で今釣れる魚」を本ページに掲載予定です。
+      <span class="tag is-primary">あつ森ユーザー向け</span>
+      <strong>あつまれどうぶつの森の北半球で今釣れる魚</strong>
+      <i class="fa-regular fa-circle-down"></i>
     </p>
+  </div>
+  <div class="tile is-parent mx-4">
+    <div class="tile is-child notification is-info">
+      <div class="columns">
+        <% fish_to_catch_now.each do |location, fishes| %>
+          <div class="column">
+            <div class="card">
+              <header class="card-header">
+                <p class="card-header-title is-centered">
+                  <strong><%= location.name %></strong>
+                </p>
+              </header>
+              <div class="card-content">
+                <div class="content">
+                  <% fishes.each do |fish| %>
+                    <%= link_to fish.name, fish_path(fish), class: 'has-text-link' %>
+                    <% if fish.selling_price_tanuki >= 10000 %>
+                      <i class="fa-solid fa-sack-dollar has-text-warning"></i>
+                    <% end %>
+                    <br>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <p>
+        <i class="fa-solid fa-circle-info"></i>
+        たぬき商店での売値が10000ベル以上の魚には<i class="fa-solid fa-sack-dollar has-text-warning"></i>をつけています。
+      </p>
+    </div>
   </div>
 </section>
