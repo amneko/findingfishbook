@@ -1,14 +1,14 @@
 class ProfilesController < ApplicationController
   def show
-    @user = User.find(current_user.id)
+    @user = current_user
   end
 
   def edit
-    @user = User.find(current_user.id)
+    @user = current_user
   end
 
   def update
-    @user = User.find(current_user.id)
+    @user = current_user
 
     if @user.update(user_params)
       redirect_to profile_path, success: t('defaults.message.update', item: User.model_name.human)

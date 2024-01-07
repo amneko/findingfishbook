@@ -3,6 +3,9 @@ ja:
     create:
       success: 'ユーザー登録が完了しました'
       fail: 'ユーザー登録に失敗しました'
+    destroy:
+      success: 'ユーザーを削除しました'
+      fail: 'ユーザーの削除に失敗しました'
   user_sessions:
     create:
       success: 'ログインしました'

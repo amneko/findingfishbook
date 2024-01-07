@@ -58,7 +58,12 @@ class PostsController < ApplicationController
         redirect_to post_path(@post), success: t('.success')
       else
         flash.now[:danger] = t('.fail')
-        render :edit, status: :unprocessable_entity
+        respond_to do |format|
+          format.html { render :edit, status: :unprocessable_entity }
+          format.turbo_stream do
+            render turbo_stream: turbo_stream.update('flash', partial: 'shared/flash_message', locals: { flash: { danger: flash.now[:danger] } })          
+          end
+        end
       end
     elsif result == false
       flash.now[:danger] = t('.fish_fail')

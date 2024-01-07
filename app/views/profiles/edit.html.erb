@@ -2,18 +2,6 @@
   <div class="container">
     <h1 class="title"><%= t('profiles.update.title')%></h1>
       <%= form_with model: @user, url: profile_path, local: false, class: 'box' do |form| %>
-        <% if @user.errors.any? %>
-          <div class="notification is-danger">
-            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-            <ul>
-              <% @user.errors.each do |error| %>
-                <li><%= error.full_message %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
-      
         <div class="field">
           <%= form.label :icon, class: 'label' %>
           <div class="control">
