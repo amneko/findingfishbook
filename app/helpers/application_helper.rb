@@ -1,7 +1,7 @@
 module ApplicationHelper
   def fish_to_catch_now
-    current_month = Time.now.strftime("%m")
-    current_time = Time.now.strftime("%H:%M")
+    current_month = Time.zone.now.strftime("%m")
+    current_time = Time.zone.now.strftime("%H:%M")
   
     matching_data = NorthAppearance.where(north_month: current_month)
                                    .where(
