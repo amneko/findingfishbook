@@ -19,5 +19,6 @@ ja:
       user:
         name: 'ユーザー名'
         email: 'メールアドレス'
+        icon: 'アイコン'
         like_fish: '好きな魚'
         like_aquarium: '好きな水族館'

@@ -2,7 +2,7 @@
   <nav class="navbar is-info" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <%= link_to 'Finding Fish Book', root_path, class: 'navbar-item has-text-white has-text-weight-bold has-text-info has-text-white-bis', style: 'transition: color 0.3s;' %>
+        <%= link_to 'Finding Fish Book', root_path, class: 'navbar-item has-text-white has-text-weight-bold' %>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
@@ -22,7 +22,7 @@
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link" id="header-profile">
-              <%= image_tag 'sample_icon.png', class: 'is-rounded' %>
+              <%= image_tag current_user.icon.url, class: 'is-rounded' %>
             </a>
 
             <div class="navbar-dropdown is-right">

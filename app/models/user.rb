@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  mount_uploader :icon, UserIconUploader
+  attr_accessor :icon_cache
   authenticates_with_sorcery!
   has_many :posts, dependent: :destroy
 

@@ -1,5 +1,5 @@
 document.addEventListener('turbo:load', (event) => {
-  const input = document.getElementById('post_image_field');
+  const input = document.getElementById('image_field');
   if (input) {
     input.addEventListener('change', (event) => {
       const file = event.target.files[0];
