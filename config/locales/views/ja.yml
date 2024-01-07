@@ -17,7 +17,7 @@ ja:
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'
-      not_updated: 'ユーザーを更新できませんでした'
+      not_update: 'ユーザーを更新できませんでした'
       not_authorized: '権限がありません'
       delete_confirm: '削除しますか？'
     aquarium:
