@@ -51,5 +51,7 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+      edit: 'ユーザー編集'
+      delete: 'ユーザー削除'
     update:
       title: 'ユーザー編集'

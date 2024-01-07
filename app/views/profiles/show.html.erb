@@ -1,9 +1,9 @@
 <section class="section">
   <div class="is-pulled-right ml-1">
-    <%= link_to (t 'defaults.delete'), '/#', data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
+    <%= link_to (t 'profiles.show.delete'), user_path(@user), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
   </div>
   <div class="is-pulled-right">
-    <%= link_to (t 'defaults.edit'), edit_profile_path, class: "button is-info" %>
+    <%= link_to (t 'profiles.show.edit'), edit_profile_path, class: "button is-info" %>
   </div>
 </section>
 
