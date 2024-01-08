@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create destroy]
   resources :aquariums
   resources :fishes
-  resources :posts
+  resources :posts do
+    collection do
+      get :likes
+    end
+  end
+  resources :likes, only: %i[create destroy]
   resource :profile, only: %i[show edit update]
 end

@@ -1,0 +1,7 @@
+<section class="container">
+  <% if @like_posts.present? %>
+    <%= render @like_posts %>
+  <% else %>
+    <p><%= t('.no_result') %></p>
+  <% end %>
+<section>

@@ -21,7 +21,9 @@
       <div class="level is-mobile">
         <div class="level-left">
           <div class="level-item has-text-centered">
-            <i class="fa-regular fa-heart"></i>
+            <% unless current_user.own?(post) %>
+              <%= render 'like_button', post: post %>
+            <% end %>
           </div>
         </div>
       </div>

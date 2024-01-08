@@ -1,7 +1,9 @@
 <div id="flash">
   <% flash.each do |message_type, message| %>
-    <div class="notification is-<%= message_type.to_s == 'notice' ? 'info' : message_type.to_s == 'alert' ? 'danger' : message_type.to_s %>">
-      <%= message %>
-    </div>
+    <% unless message_type.to_s == 'allow_other_host' %>
+      <div class="notification is-<%= message_type.to_s == 'notice' ? 'info' : message_type.to_s == 'alert' ? 'danger' : message_type.to_s %>">
+        <%= message %>
+      </div>
+    <% end %>
   <% end %>
 </div>

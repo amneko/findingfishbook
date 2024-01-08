@@ -23,3 +23,10 @@ ja:
       fish_fail: '魚の画像の投稿をお願いします'
     destroy:
       success: '削除しました'
+  likes:
+    create:
+      success: 'いいねしました'
+      fail: 'いいねできませんでした'
+    destroy:
+      success: 'いいねを解除しました'
+      fail: 'いいねの解除に失敗しました'
