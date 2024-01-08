@@ -42,6 +42,9 @@ ja:
       fish_name: '魚の名前'
       encounter_aquarium: '出会った水族館'
       body: '投稿者コメント'
+    likes:
+      title: 'お気に入り一覧'
+      no_result: 'お気に入りがありません'
   aquariums:
     show:
       encounter_fish: '出会える魚'

@@ -1,0 +1,3 @@
+<%= turbo_stream.replace "js-like-button-for-post-#{@post.id}",
+                         partial: 'posts/unlike',
+                         locals: { post: @post } %>
