@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
+  skip_before_action :require_login, only: [:index]
+
   def index
-    @posts = Post.order(created_at: :desc).page(params[:page])
+    @posts = Post.includes(:user, :fish, :aquarium).order(created_at: :desc).page(params[:page])
+    if logged_in?
+      @liked_post_ids = current_user.likes.pluck(:post_id).to_set
+    end
   end
 
   def show

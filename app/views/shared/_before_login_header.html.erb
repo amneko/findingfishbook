@@ -13,10 +13,10 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <%= link_to 'ホーム', root_path, class: 'navbar-item' %>
-          <%= link_to '投稿一覧', posts_path, class: 'navbar-item' %>
-          <%= link_to '魚一覧', fishes_path, class: 'navbar-item' %>
-          <%= link_to '水族館一覧', aquariums_path, class: 'navbar-item' %>
+          <%= link_to t('defaults.home'), root_path, class: 'navbar-item' %>
+          <%= link_to t('activerecord.models.post'), posts_path, class: 'navbar-item' %>
+          <%= link_to t('fishes.index.title'), fishes_path, class: 'navbar-item' %>
+          <%= link_to t('aquariums.index.title'), aquariums_path, class: 'navbar-item' %>
         </div>
         <div class="navbar-end">
           <div class="navbar-item">
