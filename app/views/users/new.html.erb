@@ -2,7 +2,7 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <h1 class="title is-2 has-text-centered">ユーザー登録</h1>
+        <h1 class="title is-2 has-text-centered"><%= t('users.new.title') %></h1>
         <%= render 'shared/error_messages', { object: @user } %>
         <%= form_with model: @user, local: true, class: 'box' do |f| %>
           <div class="field">

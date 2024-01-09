@@ -1,5 +1,6 @@
 ja:
   defaults:
+    home: 'ホーム'
     login: 'ログイン'
     guest_login: 'ゲストログイン'
     register: '登録する'
@@ -47,9 +48,13 @@ ja:
       title: 'お気に入り一覧'
       no_result: 'お気に入りがありません'
   aquariums:
+    index:
+      title: '水族館一覧'
     show:
       encounter_fish: '出会える魚'
   fishes:
+    index:
+      title: '魚一覧'
     show:
       encounter_aquarium: '出会える水族館'
   profiles:
