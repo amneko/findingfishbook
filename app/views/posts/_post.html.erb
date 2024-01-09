@@ -21,8 +21,10 @@
       <div class="level is-mobile">
         <div class="level-left">
           <div class="level-item has-text-centered">
-            <% unless current_user.own?(post) %>
-              <%= render 'like_button', post: post %>
+            <% if logged_in? %>
+              <% unless current_user.own?(post) %>
+                <%= render 'like_button', post: post %>
+              <% end %>
             <% end %>
           </div>
         </div>
