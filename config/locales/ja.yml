@@ -12,6 +12,9 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
+    guest_login:
+      success: 'ゲストとしてログインしました'
+      fail: 'すでにログインしています'
   posts:
     create:
       success: '投稿しました'

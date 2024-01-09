@@ -1,6 +1,7 @@
 ja:
   defaults:
     login: 'ログイン'
+    guest_login: 'ゲストログイン'
     register: '登録する'
     update: '更新する'
     post_register: '投稿する'
