@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.order(created_at: :desc).page(params[:page])
+    @posts = Post.includes(:user, :fish, :aquarium).order(created_at: :desc).page(params[:page])
+    @liked_post_ids = current_user.likes.pluck(:post_id).to_set
   end
 
   def show
