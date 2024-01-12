@@ -30,14 +30,15 @@ class PostsController < ApplicationController
       result = false
     end
 
-    if result == true
+    case result
+    when true
       if @post.save
         redirect_to posts_path, success: t('.success')
       else
         flash.now[:danger] = t('.fail')
         render :new, status: :unprocessable_entity
       end
-    elsif result == false
+    when false
       flash.now[:danger] = t('.fish_fail')
       respond_to do |format|
         format.html { render :new, status: :unprocessable_entity }
@@ -58,7 +59,8 @@ class PostsController < ApplicationController
       result = true
     end
 
-    if result == true
+    case result
+    when true
       if @post.update(post_params)
         redirect_to post_path(@post), success: t('.success')
       else
@@ -70,7 +72,7 @@ class PostsController < ApplicationController
           end
         end
       end
-    elsif result == false
+    when false
       flash.now[:danger] = t('.fish_fail')
       respond_to do |format|
         format.html { render :edit, status: :unprocessable_entity }
