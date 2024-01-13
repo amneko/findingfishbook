@@ -13,6 +13,15 @@
             <p><%= comment.body %></p>
           </div>
         </div>
+        <% if current_user.own?(comment) %>
+          <div class="media-right">
+            <div class="level-item">
+              <%= link_to comment_path(comment), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } do %>
+                <i class="fa-solid fa-trash"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </article>
     <% end %>
   </div>
