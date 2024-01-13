@@ -1,0 +1,19 @@
+<div class="column">
+  <div class="box content">
+    <% comments.each do |comment| %>
+      <article class="media">
+        <div class="media-left">
+          <figure class="image is-48x48 my-2 mx-2">
+            <%= image_tag comment.user.icon_url, class: "is-rounded" %>
+          </figure>
+        </div>
+        <div class="media-content">
+          <div class="content">
+            <p class="subtitle is-7"><%= comment.user.name %></p>
+            <p><%= comment.body %></p>
+          </div>
+        </div>
+      </article>
+    <% end %>
+  </div>
+</div>

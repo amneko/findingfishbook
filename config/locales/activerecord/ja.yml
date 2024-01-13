@@ -6,6 +6,7 @@ ja:
       location: '出現場所'
       post: '投稿一覧'
       user: 'ユーザー'
+      comment: 'コメント'
     attributes:
       fish:
         selling_price_tanuki: '売値(たぬき商店)'
@@ -24,3 +25,5 @@ ja:
         icon: 'アイコン'
         like_fish: '好きな魚'
         like_aquarium: '好きな水族館'
+      comment:
+        body: 'コメント投稿'
