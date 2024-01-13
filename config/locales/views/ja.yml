@@ -6,6 +6,7 @@ ja:
     register: '登録する'
     update: '更新する'
     post_register: '投稿する'
+    cancel: 'キャンセル'
     logout: 'ログアウト'
     post: '投稿'
     search_word: '検索ワード'
