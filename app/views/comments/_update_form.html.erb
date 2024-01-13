@@ -1,0 +1,14 @@
+<%= form_with model: comment, url: [comment], local: false do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <div class="control">
+      <%= f.text_area :body, class: 'textarea', rows: '2', placeholder: '400字以内' %>
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <%= f.submit t('defaults.update'), class: 'button is-info' %>
+      <%= link_to t('defaults.cancel'), post_path(comment.post), class: 'button is-info is-outlined' %>
+    </div>
+  </div>
+<% end %>
