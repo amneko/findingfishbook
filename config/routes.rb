@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :aquariums
   resources :fishes
   resources :posts do
+    resources :comments, shallow: true
     collection do
       get :likes
     end
