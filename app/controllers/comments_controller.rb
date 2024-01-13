@@ -2,7 +2,10 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
     if @comment.save
-      redirect_to post_path(@comment.post), success: t('comments.create.success')
+      respond_to do |format|
+        format.turbo_stream
+        format.html { redirect_to post_path(@comment.post), success: t('comments.create.success') }
+      end
     else
       redirect_to post_path(@comment.post), danger: t('comments.create.fail')
     end

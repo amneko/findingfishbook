@@ -49,7 +49,11 @@
 
 <section class="section">
   <div class="container">
-    <%= render 'comments/form', { post: @post, comment: @comment } %>
-    <%= render 'comments/comments', { comments: @comments } %>
+    <%= turbo_frame_tag 'comment_form' do %>
+      <%= render 'comments/form', { post: @post, comment: @comment } %>
+    <% end %>
+    <%= turbo_frame_tag 'comments' do %>
+      <%= render 'comments/comments', { comments: @comments } %>
+    <% end %>
   </div>
 </section>
