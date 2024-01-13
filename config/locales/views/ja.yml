@@ -65,3 +65,6 @@ ja:
       delete: 'ユーザー削除'
     update:
       title: 'ユーザー編集'
+  aquarium_maps:
+    index:
+      title: '水族館MAP'

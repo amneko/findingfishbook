@@ -18,4 +18,6 @@ Rails.application.routes.draw do
   end
   resources :likes, only: %i[create destroy]
   resource :profile, only: %i[show edit update]
+
+  get 'map', to: 'aquarium_maps#index'
 end
