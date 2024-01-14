@@ -10281,3 +10281,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: hsl(0, 0%, 98%);
   padding: 3rem 1.5rem 6rem;
 }
+
+.map-background-image {
+  background-image: url("map_japan.png");
+  height: calc(100vh - 134px);
+  position: relative;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
