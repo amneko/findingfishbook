@@ -68,3 +68,12 @@ ja:
   aquarium_maps:
     index:
       title: '水族館MAP'
+      hokkaido: '北海道'
+      tohoku: '東北'
+      tokyo: '東京'
+      kanto: '関東(東京以外)'
+      chubu: '中部'
+      kinki: '近畿'
+      chugoku: '中国'
+      shikoku: '四国'
+      kyushu_okinawa: '九州・沖縄'

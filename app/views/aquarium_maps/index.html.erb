@@ -1,4 +1,45 @@
 <section class="section">
-  <div class="container map-background-image">
+  <div class="container">
+    <div class="columns is-mobile is-multiline">
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.hokkaido'), "/#", class: "button is-link is-light" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.tohoku'), "/#", class: "button is-info is-light" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.tokyo'), "/#", class: "button is-success is-light" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.kanto'), "/#", class: "button is-success is-light" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.chubu'), "/#", class: "button is-ghost map-chubu" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.kinki'), "/#", class: "button is-warning is-light" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.chugoku'), "/#", class: "button is-ghost map-chugoku" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.shikoku'), "/#", class: "button is-ghost map-shikoku" %>
+      </div>
+      <div class="column">
+        <%= link_to t('aquarium_maps.index.kyushu_okinawa'), "/#", class: "button is-danger is-light" %>
+      </div>
+    </div>
+    <div class="columns>
+      <div class="column">
+        <i class="fa-regular fa-circle-up"></i>
+        ボタンをクリックすると各地域の水族館MAPが表示されます。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <%= image_tag 'map_japan.png', alt: "Map of Japan" %>
   </div>
 </section>
