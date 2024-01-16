@@ -156,6 +156,7 @@ GEM
       googleapis-common-protos-types (>= 1.11.0, < 2.a)
       googleauth (~> 1.9)
       grpc (~> 1.59)
+    geocoder (1.8.2)
     globalid (1.2.1)
       activesupport (>= 6.1)
     google-cloud-core (1.6.1)
@@ -402,6 +403,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   fog-aws
+  geocoder
   google-cloud-vision
   importmap-rails
   jbuilder

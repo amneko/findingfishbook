@@ -1,4 +1,6 @@
 class AquariumMapsController < ApplicationController
+  before_action :view_map, only: [:hokkaido, :tohoku, :tokyo, :kanto, :chubu, :kinki, :chugoku, :shikoku, :kyushu, :okinawa]
+
   def index
   end
 
@@ -40,5 +42,11 @@ class AquariumMapsController < ApplicationController
 
   def okinawa
     @aquariums = Aquarium.where(prefecture_id: [47])
+  end
+
+  private
+
+  def view_map
+    @google_maps_api_url = "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.config.google_maps_api_key}&callback=initMap"
   end
 end

@@ -75,6 +75,8 @@ gem 'dotenv-rails'
 # Google Cloud Vision API
 gem 'google-cloud-vision'
 
+gem 'geocoder'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
