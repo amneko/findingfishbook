@@ -1,0 +1,35 @@
+<section class="hero is-light">
+  <div class="container">
+    <div class="content">
+      <div class="mt-3 mb-3">
+        <h2><%= t('aquarium_maps.index.shikoku') %></h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-mobile is-multiline">
+      <% @aquariums.each do |aquarium| %>
+        <div class="column is-half">
+          <div class="content">
+            <h4><%= aquarium.name %></h4>
+            <ul>
+              <li>
+                <strong><%= aquarium.address %></strong>
+              </li>
+              <li>
+                <strong><%= link_to t('defaults.aquarium.website'), aquarium.website %></strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+  </div>
+</section>

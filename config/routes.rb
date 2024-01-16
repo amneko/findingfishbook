@@ -20,4 +20,14 @@ Rails.application.routes.draw do
   resource :profile, only: %i[show edit update]
 
   get 'map', to: 'aquarium_maps#index'
+  get 'map/hokkaido', to: 'aquarium_maps#hokkaido'
+  get 'map/tohoku', to: 'aquarium_maps#tohoku'
+  get 'map/tokyo', to: 'aquarium_maps#tokyo'
+  get 'map/kanto', to: 'aquarium_maps#kanto'
+  get 'map/chubu', to: 'aquarium_maps#chubu'
+  get 'map/kinki', to: 'aquarium_maps#kinki'
+  get 'map/chugoku', to: 'aquarium_maps#chugoku'
+  get 'map/shikoku', to: 'aquarium_maps#shikoku'
+  get 'map/kyushu', to: 'aquarium_maps#kyushu'
+  get 'map/okinawa', to: 'aquarium_maps#okinawa'
 end
