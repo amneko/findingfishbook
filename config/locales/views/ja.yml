@@ -17,6 +17,7 @@ ja:
     unspecified: '指定なし'
     everyones_post: 'みんなの投稿'
     animal_crossing_info: 'あつまれどうぶつの森の情報'
+    browser_back: '戻る'
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'

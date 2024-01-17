@@ -10,6 +10,11 @@
 
 <section class="section">
   <div class="container">
+    <div class="columns">
+      <div class="is-pulled-left mb-4">
+        <%= link_to t('defaults.browser_back'), map_path, class: "button is-info is-outlined" %>
+      </div>
+    </div>
     <div class="columns is-mobile is-multiline">
       <% @aquariums.each do |aquarium| %>
         <div class="column is-half">
@@ -29,7 +34,38 @@
     </div>
   </div>
 </section>
+
 <section class="section">
   <div class="container">
+    <div id="map"></div>
+    <script>
+      let map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 42.863663784536136, lng: 141.123116637668},
+          zoom: 9,
+        });
+  
+        <% @aquariums.each do |aquarium| %>
+          <% results = Geocoder.search(aquarium.name) %>
+          <% if results.present? %>
+            marker_<%= aquarium.id %> = new google.maps.Marker({
+              position: {lat: <%= results.first.coordinates[0] %>, lng: <%= results.first.coordinates[1] %>},
+              map: map,
+              title: '<%= aquarium.name %>'
+            });
+    
+            infowindow_<%= aquarium.id %> = new google.maps.InfoWindow({
+              content: '<%= aquarium.name %>'
+            });
+  
+            marker_<%= aquarium.id %>.addListener("click", () => {
+              infowindow_<%= aquarium.id %>.open(marker_<%= aquarium.id %>.get("map"), marker_<%= aquarium.id %>);
+            });
+          <% end %>
+        <% end %>
+      }
+    </script>
+    <script async defer src="<%= @google_maps_api_url %>"></script>
   </div>
 </section>
