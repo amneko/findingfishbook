@@ -14,13 +14,13 @@
       <% @aquariums.each do |aquarium| %>
         <div class="column is-half">
           <div class="content">
-            <h4><%= aquarium.name %></h4>
+            <h4><%= link_to aquarium.name, aquarium_path(aquarium), data: { turbo: false } %></h4>
             <ul>
               <li>
-                <strong><%= aquarium.address %></strong>
+                <p><%= aquarium.address %></p>
               </li>
               <li>
-                <strong><%= link_to t('defaults.aquarium.website'), aquarium.website %></strong>
+                <p><%= link_to t('defaults.aquarium.website'), aquarium.website %></p>
               </li>
             </ul>
           </div>
