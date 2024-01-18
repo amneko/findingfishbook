@@ -18,6 +18,7 @@ ja:
     everyones_post: 'みんなの投稿'
     animal_crossing_info: 'あつまれどうぶつの森の情報'
     browser_back: '戻る'
+    search: '検索'
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'
@@ -52,6 +53,7 @@ ja:
   aquariums:
     index:
       title: '水族館一覧'
+      
     show:
       encounter_fish: '出会える魚'
   fishes:

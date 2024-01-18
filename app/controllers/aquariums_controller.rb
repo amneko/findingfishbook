@@ -2,7 +2,8 @@ class AquariumsController < ApplicationController
   skip_before_action :require_login, only: [:index]
 
   def index
-    @aquariums = Aquarium.all
+    @q = Aquarium.ransack(params[:q])
+    @aquariums = @q.result.includes(:prefecture)
   end
 
   def show
