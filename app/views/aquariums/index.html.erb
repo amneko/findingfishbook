@@ -1,7 +1,26 @@
 <section class="section">
   <div class="container">
-    <h1 class="title"><%= t('activerecord.models.aquarium') %></h1>
-
-    <%= render partial: 'aquarium' %>
+    <div class="is-pulled-left">
+      <h1 class="title"><%= t('activerecord.models.aquarium') %></h1>
+    </div>
+    <div class="is-pulled-right">
+      <%= link_to t('aquarium_maps.index.title'), map_path, class: "button is-info is-outlined" %>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="columns">
+    <div class="column">
+      <%= search_form_for @q, html: { data: { turbo_frame: "aquarium-list" } } do |f| %>
+        <%= f.label :prefecture_id_eq, t('activerecord.models.prefecture') %>
+        <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '選択してください' %>
+        <%= f.submit t('defaults.search') %>
+      <% end %>
+    </div>
+  </div>
+  <div class="container">
+    <turbo-frame id="aquarium-list">
+      <%= render partial: 'aquarium' %>
+    </turbo-frame>
   </div>
 </section>

@@ -80,15 +80,16 @@
     </div>
   </div>
   <hr>
-  <div class="box mt-4 mx-4">
-    <p class="has-text-centered">
-      <span class="tag is-primary">あつ森ユーザー向け</span>
-      <strong>あつまれどうぶつの森の北半球で今釣れる魚</strong>
-      <i class="fa-regular fa-circle-down"></i>
-    </p>
-  </div>
+
   <div class="tile is-parent mx-4">
     <div class="tile is-child notification is-info">
+      <div class="box">
+        <p class="has-text-centered">
+          <span class="tag is-primary">あつ森ユーザー向け</span>
+          <strong>あつまれどうぶつの森の北半球で今釣れる魚</strong>
+          <i class="fa-regular fa-circle-down"></i>
+        </p>
+      </div>
       <div class="columns">
         <% fish_to_catch_now.each do |location, fishes| %>
           <div class="column">
