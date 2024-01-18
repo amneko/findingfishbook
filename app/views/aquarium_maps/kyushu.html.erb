@@ -10,12 +10,12 @@
 
 <section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="is-pulled-left mb-4">
-        <%= link_to t('defaults.browser_back'), map_path, class: "button is-info is-outlined" %>
-      </div>
-    </div>
     <div class="columns is-mobile is-multiline">
+      <div class="column is-full">
+        <div class="is-pulled-left mb-4">
+          <%= link_to t('defaults.browser_back'), map_path, class: "button is-info is-outlined" %>
+        </div>
+      </div>
       <% @aquariums.each do |aquarium| %>
         <div class="column is-half">
           <div class="content">
