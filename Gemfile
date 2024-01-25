@@ -79,6 +79,8 @@ gem 'geocoder'
 
 gem 'ransack'
 
+gem 'config'
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
@@ -89,6 +91,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'letter_opener_web', '~> 2.0'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 

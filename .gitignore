@@ -46,3 +46,7 @@
 
 # Cloud Vision API JSONキー
 /vision-api-20231111-8bcc02976500.json
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

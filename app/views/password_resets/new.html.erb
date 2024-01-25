@@ -1,0 +1,18 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title"><%= t('password_reset.new.title')%></h1>
+    <%= form_with url: password_resets_path do |f| %>
+      <div class="field">
+        <%= f.label :email %>
+        <div class="control">
+          <%= f.email_field :email %>
+        </div>
+      </div>
+      <div class="field">
+        <div class="control">
+          <%= f.submit t('defaults.request'), class: 'button is-info' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>
