@@ -1,7 +1,7 @@
 <section class="section">
   <div class="is-pulled-right ml-1">
     <%= link_to t('defaults.password_reset'), new_password_reset_path, class: "button is-warning" %>
-  </div>  
+  </div>
   <div class="is-pulled-right ml-1">
     <%= link_to (t 'profiles.show.delete'), user_path(@user), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete }, class: "button is-warning" %>
   </div>

@@ -1,6 +1,6 @@
 <section class="section">
   <div class="container">
-    <h1 class="title"><%= t('profiles.update.title')%></h1>
+    <h1 class="title"><%= t('profiles.update.title') %></h1>
       <%= form_with model: @user, url: profile_path, local: false, class: 'box' do |form| %>
         <div class="field">
           <%= form.label :icon, class: 'label' %>
@@ -12,21 +12,21 @@
             </div>
           </div>
         </div>
-      
+
         <div class="field">
           <%= form.label :name, class: 'label' %>
           <div class="control">
             <%= form.text_field :name %>
           </div>
         </div>
-      
+
         <div class="field">
           <%= form.label :email, class: 'label' %>
           <div class="control">
             <%= form.email_field :email %>
           </div>
         </div>
-      
+
         <div class="field">
           <%= form.label :like_fish, class: 'label' %>
           <div class="control">

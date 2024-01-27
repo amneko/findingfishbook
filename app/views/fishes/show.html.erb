@@ -18,7 +18,7 @@
           <h4><%= t('defaults.animal_crossing_info') %></h4>
           <ul>
             <li>
-              <strong><%= t('activerecord.models.location')%> : <%= @fish.location.name %></strong>
+              <strong><%= t('activerecord.models.location') %> : <%= @fish.location.name %></strong>
             </li>
             <li>
               <strong><%= t('activerecord.attributes.fish.selling_price_tanuki') %> : <%= @fish.selling_price_tanuki %></strong>
@@ -33,7 +33,7 @@
         <div class="content">
           <h4><%= t('fishes.show.encounter_aquarium') %></h4>
             <% @aquarium_with_fish.each do |aquariums| %>
-              <%= link_to aquariums.aquarium.name, aquarium_path(aquariums.aquarium), class: 'button is-link is-rounded has-text-white'  %>
+              <%= link_to aquariums.aquarium.name, aquarium_path(aquariums.aquarium), class: 'button is-link is-rounded has-text-white' %>
             <% end %>
         </div>
       </div>

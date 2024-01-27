@@ -94,6 +94,7 @@ group :development, :test do
   gem 'rubocop-checkstyle_formatter'
   gem 'rspec-rails'
   gem 'rspec_junit_formatter'
+  gem 'erb_lint', require: false
 end
 
 group :development do

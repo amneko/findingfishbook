@@ -15,7 +15,7 @@
           <h4><%= t('defaults.aquarium.info') %></h4>
           <ul>
             <li>
-              <strong><%= t('defaults.aquarium.address')%> : <%= @aquarium.address %></strong>
+              <strong><%= t('defaults.aquarium.address') %> : <%= @aquarium.address %></strong>
             </li>
             <li>
               <strong><%= link_to t('defaults.aquarium.website'), @aquarium.website %></strong>
@@ -27,7 +27,7 @@
         <div class="content">
           <h4><%= t('aquariums.show.encounter_fish') %></h4>
             <% @fish_in_aquarium.each do |fishes| %>
-              <%= link_to fishes.fish.name, fish_path(fishes.fish), class: 'button is-link is-rounded has-text-white'  %>
+              <%= link_to fishes.fish.name, fish_path(fishes.fish), class: 'button is-link is-rounded has-text-white' %>
             <% end %>
         </div>
       </div>
