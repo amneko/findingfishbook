@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# AquariumsController
 class AquariumsController < ApplicationController
-  skip_before_action :require_login, only: [:index]
+  skip_before_action :require_login, only: %i[index]
 
   def index
     @q = Aquarium.ransack(params[:q])

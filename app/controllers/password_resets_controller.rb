@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# PasswordResetsController
 class PasswordResetsController < ApplicationController
   skip_before_action :require_login
 
@@ -18,19 +21,35 @@ class PasswordResetsController < ApplicationController
 
   def update
     @token = params[:id]
-    @user = User.load_from_reset_password_token(params[:id])
+    @user = User.load_from_reset_password_token(@token)
 
-    if @user.blank?
-      not_authenticated
-      return
-    end
+    handle_authentication_failure && return if @user.blank?
 
-    @user.password_confirmation = params[:user][:password_confirmation]
-    if @user.change_password(params[:user][:password])
-      redirect_to login_path
-      flash[:success] = t('.success')
+    handle_password_change
+  end
+
+  private
+
+  def handle_authentication_failure
+    not_authenticated
+  end
+
+  def handle_password_change
+    @user.password_confirmation = params.dig(:user, :password_confirmation)
+
+    if @user.change_password(params.dig(:user, :password))
+      handle_password_change_success
     else
-      render action: 'edit'
+      handle_password_change_failure
     end
+  end
+
+  def handle_password_change_success
+    redirect_to login_path
+    flash[:success] = t('.success')
+  end
+
+  def handle_password_change_failure
+    render :edit
   end
 end

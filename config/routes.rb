@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   get 'top_pages/top'
   root 'top_pages#top'
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
   resources :aquariums
   resources :fishes
   resources :posts do
-    resources :comments, shallow: true, only: [:create, :edit, :update, :destroy]
+    resources :comments, shallow: true, only: %i[create edit update destroy]
     collection do
       get :likes
     end

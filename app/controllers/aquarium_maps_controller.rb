@@ -1,8 +1,10 @@
-class AquariumMapsController < ApplicationController
-  before_action :view_map, only: [:hokkaido, :tohoku, :tokyo, :kanto, :chubu, :kinki, :chugoku, :shikoku, :kyushu, :okinawa]
+# frozen_string_literal: true
 
-  def index
-  end
+# AquariumMapsController
+class AquariumMapsController < ApplicationController
+  before_action :view_map, only: %i[hokkaido tohoku tokyo kanto chubu kinki chugoku shikoku kyushu okinawa]
+
+  def index; end
 
   def hokkaido
     @aquariums = Aquarium.where(prefecture_id: 1)

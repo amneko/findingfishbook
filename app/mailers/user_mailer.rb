@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# UserMailer
 class UserMailer < ApplicationMailer
   default from: ENV['USER_EMAIL_PWRESET']
 

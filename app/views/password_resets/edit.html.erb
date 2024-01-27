@@ -1,6 +1,6 @@
 <section class="section">
   <div class="container">
-    <h1 class="title"><%= t('password_reset.edit.title')%></h1>
+    <h1 class="title"><%= t('password_reset.edit.title') %></h1>
     <%= form_with model: @user, url: password_reset_path(@token) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <div class="field">

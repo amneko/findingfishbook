@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# UsersController
 class UsersController < ApplicationController
   skip_before_action :require_login, only: %i[new create destroy]
 
@@ -22,18 +25,29 @@ class UsersController < ApplicationController
       redirect_to root_path, status: :see_other, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
-      respond_to do |format|
-        format.html { render :edit, status: :unprocessable_entity }
-        format.turbo_stream do
-          render turbo_stream: turbo_stream.update('flash', partial: 'shared/flash_message', locals: { flash: { danger: flash.now[:danger] } })
-        end
-      end
+      render_or_stream(:edit)
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :icon, :like_fish, :like_aquarium, :role)
+    params.require(:user).permit(
+      :name, :email, :password, :password_confirmation,
+      :icon, :like_fish, :like_aquarium, :role
+    )
+  end
+
+  def render_or_stream(action)
+    respond_to do |format|
+      format.html { render action, status: :unprocessable_entity }
+      format.turbo_stream do
+        render turbo_stream: turbo_stream.update(
+          'flash',
+          partial: 'shared/flash_message',
+          locals: { flash: { danger: flash.now[:danger] } }
+        )
+      end
+    end
   end
 end
