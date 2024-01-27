@@ -13,6 +13,15 @@
     <%= javascript_import_module_tag "header_navbar" %>
     <%= javascript_import_module_tag "@fortawesome/fontawesome-free" %>
     <%= javascript_import_module_tag "@hotwired/turbo-rails" %>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WQ3B8HK5FR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-WQ3B8HK5FR');
+    </script>
   </head>
 
   <body>
