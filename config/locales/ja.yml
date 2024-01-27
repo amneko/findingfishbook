@@ -37,3 +37,8 @@ ja:
     create:
       success: 'コメントを投稿しました'
       fail: 'コメントの投稿に失敗しました'
+  password_resets:
+    create:
+      success: 'パスワードリセットのメールを送信しました'
+    update:
+      success: 'パスワードがリセットされました'
