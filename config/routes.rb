@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   get 'map/shikoku', to: 'aquarium_maps#shikoku'
   get 'map/kyushu', to: 'aquarium_maps#kyushu'
   get 'map/okinawa', to: 'aquarium_maps#okinawa'
+
+  get 'contacts', to: 'contacts#index'
 end

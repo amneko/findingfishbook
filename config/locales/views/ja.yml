@@ -87,3 +87,5 @@ ja:
       title: 'パスワードリセット申請'
     edit:
       title: 'パスワード再設定'
+  contacts:
+    title: '問合せ'
