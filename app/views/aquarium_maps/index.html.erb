@@ -1,5 +1,12 @@
 <section class="section">
   <div class="container">
+    <div class="is-pulled-right">
+      <%= link_to t('aquariums.index.title'), aquariums_path, class: "button is-info is-outlined" %>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
     <div class="columns is-mobile is-multiline">
       <div class="column">
         <%= link_to t('aquarium_maps.index.hokkaido'), map_hokkaido_path, class: "button is-link is-light", data: { turbo: false } %>
@@ -43,6 +50,6 @@
 
 <section class="section">
   <div class="container">
-    <%= image_tag 'map_japan.png', alt: "Map of Japan" %>
+    <%= image_tag 'map_japan.png', alt: "Map of Japan", style: "max-height: 60vh; width: 100%; object-fit: contain;" %>
   </div>
 </section>

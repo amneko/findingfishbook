@@ -9,13 +9,15 @@
   </div>
 </section>
 <section class="section">
-  <div class="columns">
-    <div class="column">
-      <%= search_form_for @q, html: { data: { turbo_frame: "aquarium-list" } } do |f| %>
-        <%= f.label :prefecture_id_eq, t('activerecord.models.prefecture') %>
-        <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '選択してください' %>
-        <%= f.submit t('defaults.search') %>
-      <% end %>
+  <div class="container">
+    <div class="columns">
+      <div class="column mb-5">
+        <%= search_form_for @q, html: { data: { turbo_frame: "aquarium-list" } } do |f| %>
+          <%= f.label :prefecture_id_eq, t('activerecord.models.prefecture') %>
+          <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '選択してください' %>
+          <%= f.submit t('defaults.search') %>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="container">

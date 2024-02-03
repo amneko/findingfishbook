@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post 'guest_login', to: 'user_sessions#guest_login'
 
   resources :users, only: %i[new create destroy]
+  # get 'map', to: 'aquariums#index', as: :aquariums
+  # get 'aquariums/:id', to: 'aquariums#show', as: :aquarium
   resources :aquariums
   resources :fishes
   resources :posts do

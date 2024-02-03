@@ -10296,8 +10296,3 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   color: #c71585;
   background-color: #ffdbed;
 }
-
-#map {
-  height: 80vh;
-  width: 100%;
-}
