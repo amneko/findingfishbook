@@ -2,8 +2,9 @@
   <nav class="navbar is-info" role="navigation" aria-label="main navigation">
     <div class="container">
       <div class="navbar-brand">
-        <%= link_to 'Finding Fish Book', root_path, class: 'navbar-item has-text-white has-text-weight-bold' %>
-
+        <div class="navbar-item brand-text">
+          <%= link_to 'Finding Fish Book', root_path, class: 'navbar-item is-size-4 has-text-white has-text-weight-bold' %>
+        </div>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -13,7 +14,6 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-start">
-          <%= link_to t('defaults.home'), root_path, class: 'navbar-item' %>
           <%= link_to t('activerecord.models.post'), posts_path, class: 'navbar-item' %>
           <%= link_to t('fishes.index.title'), fishes_path, class: 'navbar-item' %>
           <%= link_to t('aquariums.index.title'), map_path, class: 'navbar-item' %>

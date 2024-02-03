@@ -10316,3 +10316,17 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .card-content.post {
   flex-grow: 1;
 }
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-burger {
+  order: 1;
+}
+
+.navbar-item.brand-text {
+  order: 0;
+}
