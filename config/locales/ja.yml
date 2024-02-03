@@ -42,3 +42,29 @@ ja:
       success: 'パスワードリセットのメールを送信しました'
     update:
       success: 'パスワードがリセットされました'
+  fishes:
+    update:
+      success: '情報を更新しました'
+      fail: '情報の更新に失敗しました'
+  aquariums:
+    update:
+      success: '情報を更新しました'
+      fail: '情報の更新に失敗しました'
+  admin:
+    user_sessions:
+      create:
+        success: 'ログインしました'
+        fail: 'ログインに失敗しました'
+      destroy:
+        success: 'ログアウトしました'
+    users:
+      destroy:
+        success: 'ユーザーを削除しました'
+        fail: 'ユーザーの削除に失敗しました'
+    posts:
+      update:
+        success: '更新しました'
+        fail: '更新できませんでした'
+        fish_fail: '魚の画像の投稿をお願いします'
+      destroy:
+        success: '削除しました'

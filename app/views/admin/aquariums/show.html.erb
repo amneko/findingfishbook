@@ -1,0 +1,74 @@
+<section class="hero is-light">
+  <div class="container">
+    <div class="content">
+      <div class="mt-3 mb-3">
+        <h2><%= @aquarium.name %></h2>
+      </div>
+    </div>
+  </div>
+</section>
+<% if current_user.admin? %>
+  <section class="section">
+    <div class="is-pulled-right">
+      <%= link_to (t 'defaults.edit'), edit_admin_aquarium_path(@aquarium), class: "button is-primary" %>
+    </div>
+    <div class="is-pulled-left">
+      <%= link_to (t 'defaults.browser_back'), admin_aquariums_path, class: "button is-primary" %>
+    </div>
+  </section>
+<% end %>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="content">
+          <h4><%= t('defaults.aquarium.info') %></h4>
+          <ul>
+            <li>
+              <strong><%= t('defaults.aquarium.address') %> : <%= @aquarium.address %></strong>
+            </li>
+            <li>
+              <strong><%= link_to t('defaults.aquarium.website'), @aquarium.website %></strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h4><%= t('aquariums.show.encounter_fish') %></h4>
+            <% @fish_in_aquarium.each do |fishes| %>
+              <%= link_to fishes.fish.name, admin_fish_path(fishes.fish), class: 'button is-link is-rounded has-text-white' %>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<hr class="mx-5">
+<section class="section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <div class="my-3 mx-3">
+        <h2><%= t('defaults.everyones_post') %></h2>
+      </div>
+    </div>
+    <div class="columns is-multiline">
+      <% @post_with_aquarium.each do |posts| %>
+        <div class="column is-one-quarter">
+          <div class="card my-4 mx-4">
+            <div class="card-image my-3 mx-3">
+              <figure class="image is-4by3">
+                <%= image_tag posts.post_image_url %>
+              </figure>
+            </div>
+            <div class="column is-12 featured-content ">
+              <h2 class="heading post-category"><%= posts.user.name %></h2>
+              <h2 class="heading post-category"><%= posts.fish.name %></h2>
+              <%= link_to t('posts.index.show_post'), admin_post_path(posts), class: "button is-small is-info is-outlined" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

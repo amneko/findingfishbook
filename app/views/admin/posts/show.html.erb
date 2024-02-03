@@ -1,0 +1,64 @@
+<% if current_user.admin? %>
+  <section class="section">
+    <div class="is-pulled-right ml-1">
+      <%= link_to (t 'defaults.delete'), admin_post_path(@post), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete } , class: "button is-warning" %>
+    </div>
+    <div class="is-pulled-right">
+      <%= link_to (t 'defaults.edit'), edit_admin_post_path(@post), class: "button is-primary" %>
+    </div>
+    <div class="is-pulled-left">
+      <%= link_to (t 'defaults.browser_back'), admin_posts_path, class: "button is-primary" %>
+    </div>
+  </section>
+<% end %>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-centered is-flex is-justify-content-center">
+        <%= image_tag @post.post_image_url %>
+      </div>
+      <div class="column">
+        <div class="content">
+          <div class="media is-marginless is-align-items-center">
+            <figure class="media-left is-marginless">
+              <p class="image is-48x48 mx-2">
+                <%= image_tag @post.user.icon_url, class: "is-rounded" %>
+              </p>
+            </figure>
+            <div class="media-content is-align-items-center">
+              <%= @post.user.name %>
+            </div>
+          </div>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.shooting_date') %> : </strong>
+          <%= @post.shooting_date.strftime('%Y年%m月%d日') %>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.fish_name') %> : </strong>
+          <%= @post.fish.name %>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.encounter_aquarium') %> : </strong>
+          <%= @post.aquarium.name %>
+          <hr class="my-2">
+          <strong class="has-text-grey"><%= t('posts.index.body') %> : </strong>
+          <%= @post.body %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="mx-5">
+
+<section class="section">
+  <div class="container">
+    <div class="content has-text-centered">
+      <div>
+        <h2><%= t('activerecord.models.comment') %></h2>
+      </div>
+    </div>
+    <%= turbo_frame_tag 'comments' do %>
+      <%= render 'comments/comments', { comments: @comments } %>
+    <% end %>
+  </div>
+</section>

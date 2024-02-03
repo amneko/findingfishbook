@@ -1,0 +1,44 @@
+<section class="hero is-light">
+  <div class="container">
+    <div class="content">
+      <div class="mt-3 mb-3">
+        <h2><%= @fish.name %></h2>
+      </div>
+    </div>
+  </div>
+</section>
+<% if current_user.admin? %>
+  <section class="section">
+    <div class="is-pulled-right">
+      <%= link_to (t 'defaults.edit'), edit_admin_fish_path(@fish), class: "button is-primary" %>
+    </div>
+    <div class="is-pulled-left">
+      <%= link_to (t 'defaults.browser_back'), admin_fishes_path, class: "button is-primary" %>
+    </div>
+  </section>
+<% end %>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-centered is-flex is-justify-content-center">
+        <%= image_tag @fish.image_url %>
+      </div>
+      <div class="column">
+        <div class="content">
+          <h4><%= t('defaults.animal_crossing_info') %></h4>
+          <ul>
+            <li>
+              <strong><%= t('activerecord.models.location') %> : <%= @fish.location.name %></strong>
+            </li>
+            <li>
+              <strong><%= t('activerecord.attributes.fish.selling_price_tanuki') %> : <%= @fish.selling_price_tanuki %></strong>
+            </li>
+            <li>
+              <strong><%= t('activerecord.attributes.fish.selling_price_justin') %> : <%= @fish.selling_price_justin %></strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

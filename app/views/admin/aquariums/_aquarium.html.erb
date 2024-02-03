@@ -1,0 +1,20 @@
+<table class="table is-bordered is-striped is-narrow is-hoverable">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th><%= t('defaults.aquarium.name') %></th>
+      <th><%= t('defaults.aquarium.address') %></th>
+      <th><%= t('defaults.aquarium.website') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @aquariums.order(:id).each do |aquarium| %>
+      <tr>
+        <td><%= aquarium.id %></td>
+        <td><%= link_to aquarium.name, admin_aquarium_path(aquarium), data: { turbo: false } %></td>
+        <td><%= aquarium.address %></td>
+        <td><%= link_to t('defaults.aquarium.website'), aquarium.website %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

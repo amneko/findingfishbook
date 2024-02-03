@@ -1,0 +1,38 @@
+<% if current_user.admin? %>
+  <section class="section">
+    <div class="is-pulled-right ml-1">
+      <%= link_to (t 'profiles.show.delete'), admin_user_path(@user), data: { turbo_confirm: t('defaults.message.delete_confirm'), turbo_method: :delete }, class: "button is-warning" %>
+    </div>
+    <div class="is-pulled-right">
+      <%= link_to (t 'defaults.edit'), edit_admin_user_path(@user), class: "button is-primary" %>
+    </div>
+    <div class="is-pulled-left">
+      <%= link_to (t 'defaults.browser_back'), admin_users_path, class: "button is-primary" %>
+    </div>
+  </section>
+<% end %>
+
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column has-text-centered is-flex is-justify-content-center">
+        <%= image_tag @user.icon_url, class: 'is-rounded' %>
+      </div>
+      <div class="column">
+        <div class="content">
+          <strong><%= @user.name %></strong>
+          <hr class="my-2">
+          <strong><%= t('activerecord.attributes.user.email') %> : </strong>
+          <%= @user.email %>
+          <hr class="my-2">
+          <strong><%= t('activerecord.attributes.user.like_fish') %> : </strong>
+          <%= @user.like_fish %>
+          <hr class="my-2">
+          <strong><%= t('activerecord.attributes.user.like_aquarium') %> : </strong>
+          <%= @user.like_aquarium %>
+          <hr class="my-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

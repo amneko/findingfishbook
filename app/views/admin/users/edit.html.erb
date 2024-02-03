@@ -1,0 +1,55 @@
+<section class="section">
+  <div class="container">
+    <div>
+      <%= link_to (t 'defaults.browser_back'), admin_user_path(@user), class: "button is-primary" %>
+    </div>
+    <h1 class="title"><%= t('profiles.update.title') %></h1>
+      <%= form_with model: @user, url: admin_user_path(@user), local: false, class: 'box' do |form| %>
+        <div class="field">
+          <%= form.label :icon, class: 'label' %>
+          <div class="control">
+            <%= form.file_field :icon, accept: 'image/*', id: 'image_field' %>
+            <%= form.hidden_field :icon_cache %>
+            <div class="mt-3 mb-3">
+              <%= image_tag @user.icon.url, id: 'preview', class: 'preview-image', style: 'max-width: 150px; max-height: 150px;' %>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :name, class: 'label' %>
+          <div class="control">
+            <%= form.text_field :name %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :email, class: 'label' %>
+          <div class="control">
+            <%= form.email_field :email %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :like_fish, class: 'label' %>
+          <div class="control">
+            <%= form.text_field :like_fish %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= form.label :like_aquarium, class: 'label' %>
+          <div class="control">
+            <%= form.text_field :like_aquarium %>
+          </div>
+        </div>
+
+        <div class="field">
+          <div class="control">
+            <%= form.submit t('defaults.update'), class: 'button is-primary' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
