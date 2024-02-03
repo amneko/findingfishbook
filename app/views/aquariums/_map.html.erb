@@ -1,0 +1,30 @@
+<section class="section">
+  <div class="container">
+    <div id="map" class="map-show"></div>
+    <script>
+      let map;
+      function initMap() {
+        <% results = Geocoder.search(@aquarium.name) %>
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: <%= results.first.coordinates[0] %>, lng: <%= results.first.coordinates[1] %>},
+          zoom: 12,
+        });
+
+        <% if results.present? %>
+          marker_<%= @aquarium.id %> = new google.maps.Marker({
+            position: {lat: <%= results.first.coordinates[0] %>, lng: <%= results.first.coordinates[1] %>},
+            map: map,
+            title: '<%= @aquarium.name %>'
+          });
+          infowindow_<%= @aquarium.id %> = new google.maps.InfoWindow({
+            content: '<%= @aquarium.name %>'
+          });
+          marker_<%= @aquarium.id %>.addListener("click", () => {
+            infowindow_<%= @aquarium.id %>.open(marker_<%= @aquarium.id %>.get("map"), marker_<%= @aquarium.id %>);
+          });
+        <% end %>
+      }
+    </script>
+    <script async defer src="<%= @google_maps_api_url %>"></script>
+  </div>
+</section>
