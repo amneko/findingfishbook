@@ -26,11 +26,11 @@
   </div>
   <div class="columns mx-4">
     <div class="column is-4">
-      <div class="card is-shady">
+      <div class="card is-shady top">
         <div class="card-image has-text-centered">
           <i class="fa-solid fa-images is-size-1 mt-5"></i>
         </div>
-        <div class="card-content">
+        <div class="card-content top">
           <div class="content">
             <h4 class="has-text-centered">写真の投稿</h4>
             <p>
@@ -43,11 +43,11 @@
       </div>
     </div>
     <div class="column is-4">
-        <div class="card is-shady">
+        <div class="card is-shady top">
             <div class="card-image has-text-centered">
               <i class="fa-solid fa-fish-fins is-size-1 mt-5"></i>
             </div>
-            <div class="card-content">
+            <div class="card-content top">
               <div class="content">
                   <h4 class="has-text-centered">魚の情報確認</h4>
                   <p>
@@ -61,11 +61,11 @@
         </div>
     </div>
     <div class="column is-4">
-      <div class="card is-shady">
+      <div class="card is-shady top">
           <div class="card-image has-text-centered">
             <i class="fa-solid fa-city is-size-1 mt-5"></i>
           </div>
-          <div class="card-content">
+          <div class="card-content top">
             <div class="content">
                 <h4 class="has-text-centered">水族館の情報確認</h4>
                 <p>
@@ -105,6 +105,9 @@
                     <%= link_to fish.name, fish_path(fish), class: 'has-text-link' %>
                     <% if fish.selling_price_tanuki >= 10000 %>
                       <i class="fa-solid fa-sack-dollar has-text-warning"></i>
+                    <% end %>
+                    <% if fish.name == "シーラカンス" %>
+                      ※雨/雪の日のみ
                     <% end %>
                     <br>
                   <% end %>

@@ -10330,3 +10330,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .navbar-item.brand-text {
   order: 0;
 }
+
+.card.is-shady.top {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+}
+
+.card-content.top {
+  flex-grow: 1;
+}

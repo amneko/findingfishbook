@@ -31,14 +31,14 @@
   <div class="field">
     <%= form.label :fish_id, class: 'label' %>
     <div class="control">
-      <%= form.collection_select :fish_id, Fish.all, :id, :name, { prompt: "魚を選択" }, { class: 'select' } %>
+      <%= form.collection_select :fish_id, Fish.order(:id), :id, :name, { prompt: "魚を選択" }, { class: 'select' } %>
     </div>
   </div>
 
   <div class="field">
     <%= form.label :aquarium_id, class: 'label' %>
     <div class="control">
-      <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name, { prompt: "水族館を選択" }, { class: 'select' } %>
+      <%= form.collection_select :aquarium_id, Aquarium.order(:id), :id, :name, { prompt: "水族館を選択" }, { class: 'select' } %>
     </div>
   </div>
 
