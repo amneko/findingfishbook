@@ -10306,3 +10306,13 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   width: 50%;
   height: 50vh;
 }
+
+.card.post {
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+}
+
+.card-content.post {
+  flex-grow: 1;
+}
