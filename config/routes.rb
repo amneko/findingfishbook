@@ -35,4 +35,15 @@ Rails.application.routes.draw do
   get 'map/okinawa', to: 'aquarium_maps#okinawa'
 
   get 'contacts', to: 'contacts#index'
+
+  namespace :admin do
+    root to: 'dashboards#index'
+    get 'login', to: 'user_sessions#new'
+    post 'login', to: 'user_sessions#create'
+    delete 'logout', to: 'user_sessions#destroy'
+    resources :users, only: %i[index edit update show destroy]
+    resources :posts, only: %i[index edit update show destroy]
+    resources :fishes, only: %i[index edit update show destroy]
+    resources :aquariums, only: %i[index edit update show destroy]
+  end
 end

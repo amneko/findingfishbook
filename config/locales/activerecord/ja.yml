@@ -10,8 +10,16 @@ ja:
       prefecture: '都道府県'
     attributes:
       fish:
+        name: '名前'
+        image: '画像'
+        location_id: '出現場所'
         selling_price_tanuki: '売値(たぬき商店)'
         selling_price_justin: '売値(ジャスティン)'
+      aquarium:
+        name: '水族館名'
+        prefecture_id: '都道府県'
+        address: '住所'
+        website: 'Webサイト'
       post:
         post_image: '魚の画像'
         fish_id: '魚' 

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="columns">
+    <div class="column">
+      <section class="hero is-light welcome is-small mt-5">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-link">
+              Hello, Admin.
+            </h1>
+            <h2 class="subtitle has-text-dark">
+              I hope you are having a great day!
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section class="info-tiles mt-5 mb-5">
+        <div class="tile is-ancestor has-text-centered">
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title"><%= User.count %></p>
+              <p class="subtitle">Users</p>
+              <p><%= User.admin.count %> admin</p>
+              <p><%= User.general.count %> general</p>
+              <p><%= User.guest.count %> guest</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title"><%= Post.count %></p>
+              <p class="subtitle">Posts</p>
+            </article>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child box">
+              <p class="title"><%= Comment.count %></p>
+              <p class="subtitle">Comments</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

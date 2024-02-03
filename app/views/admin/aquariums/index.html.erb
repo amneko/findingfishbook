@@ -1,0 +1,14 @@
+<section class="section">
+  <div class="container">
+    <div class="is-pulled-left">
+      <h1 class="title"><%= t('activerecord.models.aquarium') %></h1>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <turbo-frame id="aquarium-list">
+      <%= render partial: 'aquarium' %>
+    </turbo-frame>
+  </div>
+</section>

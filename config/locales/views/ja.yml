@@ -21,6 +21,7 @@ ja:
     search: '検索'
     request: '申請'
     reset: 'リセット'
+    admin_login: '管理画面ログイン'
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'
@@ -89,3 +90,5 @@ ja:
       title: 'パスワード再設定'
   contacts:
     title: '問合せ'
+  admin:
+    title: 'Admin Console'

@@ -1,0 +1,68 @@
+<section class="section">
+  <div class="container">
+    <% if flash.now[:notice] %>
+      <div class="notification is-danger">
+        <p><%= flash.now[:notice] %></p>
+      </div>
+    <% end %>
+
+    <%= form_with model: @post, url: admin_post_path(@post), local: false, class: 'box' do |form| %>
+      <% if @post.errors.any? %>
+        <div class="notification is-danger">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+          <ul>
+            <% @post.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :post_image, class: 'label' %>
+        <div class="control">
+          <%= form.file_field :post_image, accept: 'image/*', id: 'image_field' %>
+          <%= form.hidden_field :post_image_cache %>
+          <div class="mt-3 mb-3">
+            <%= image_tag @post.post_image.url, id: 'preview', class: 'preview-image', style: 'max-width: 300px; max-height: 200px;' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :fish_id, class: 'label' %>
+        <div class="control">
+          <%= form.collection_select :fish_id, Fish.all, :id, :name, { prompt: "魚を選択" }, { class: 'select' } %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :aquarium_id, class: 'label' %>
+        <div class="control">
+          <%= form.collection_select :aquarium_id, Aquarium.all, :id, :name, { prompt: "水族館を選択" }, { class: 'select' } %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :shooting_date, class: 'label' %>
+        <div class="control">
+          <%= form.date_field :shooting_date, class: 'input', style: 'width: 150px;' %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :body, class: 'label' %>
+        <div class="control">
+          <%= form.text_area :body, placeholder: '任意入力' %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <%= form.submit action_name == 'new' ? t('defaults.post_register') : t('defaults.update'), class: 'button is-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<header class='header'>
+  <nav class="navbar is-primary">
+    <div class="container">
+      <div class="navbar-brand">
+        <div class="navbar-item brand-text">
+          <strong><%= link_to t('admin.title'), admin_root_path, class: 'navbar-item is-size-4 has-text-white' %></strong>
+        </div>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <%= link_to t('activerecord.models.user'), admin_users_path, class: 'navbar-item' %>
+          <%= link_to t('activerecord.models.post'), admin_posts_path, class: 'navbar-item' %>
+          <%= link_to t('activerecord.models.fish'), admin_fishes_path, class: 'navbar-item' %>
+          <%= link_to t('activerecord.models.aquarium'), admin_aquariums_path, class: 'navbar-item' %>
+        </div>
+        <div class="navbar-end">
+          <div id="navMenu" class="navbar-menu is-right">
+            <%= link_to t('defaults.logout'), admin_logout_path, class: 'navbar-item', data: { turbo_method: :delete } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

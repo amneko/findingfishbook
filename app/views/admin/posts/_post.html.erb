@@ -1,0 +1,35 @@
+<div class="column is-one-quarter">
+  <div class="card">
+    <div class="header">
+      <div class="media is-align-items-center">
+        <div class="media-left">
+          <figure class="image is-48x48 my-2 mx-2">
+            <%= image_tag post.user.icon_url, class: "is-rounded" %>
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4"><%= post.user.name %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag post.post_image_url %>
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="content">
+        <p>
+          <%= t('posts.index.shooting_date') %> : <%= post.shooting_date.strftime('%Y年%m月%d日') %>
+        </p>
+        <div class="buttons">
+          <%= link_to post.fish.name, admin_fish_path(post.fish), class: 'button is-link is-rounded has-text-white', data: { turbo: false } %>
+          <%= link_to post.aquarium.name, admin_aquarium_path(post.aquarium), class: 'button is-link is-rounded has-text-white', data: { turbo: false } %>
+        </div>
+        <p>
+          <%= link_to t('posts.index.show_post'), admin_post_path(post), class: "button is-info is-outlined", data: { turbo: false } %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

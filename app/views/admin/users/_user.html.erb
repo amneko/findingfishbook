@@ -1,0 +1,7 @@
+<tbody>
+  <tr>
+    <td><%= user.id %></td>
+    <td class="image is-64x64"><%= image_tag user.icon_url %></td>
+    <td><%= link_to user.name, admin_user_path(user), data: { turbo: false } %></td>
+  </tr>
+</tbody>

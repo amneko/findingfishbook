@@ -1,0 +1,60 @@
+<section class="section">
+  <div class="container">
+    <% if flash.now[:notice] %>
+      <div class="notification is-danger">
+       <p><%= flash.now[:notice] %></p>
+      </div>
+    <% end %>
+
+    <div>
+      <%= link_to (t 'defaults.browser_back'), admin_aquarium_path(@aquarium), class: "button is-primary" %>
+    </div>
+
+    <%= form_with model: @aquarium, url: admin_aquarium_path(@aquarium), local: false, class: 'box' do |form| %>
+      <% if @aquarium.errors.any? %>
+        <div class="notification is-danger">
+          <h2><%= pluralize(@aquarium.errors.count, "error") %> prohibited this aquarium from being saved:</h2>
+          <ul>
+            <% @aquarium.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name, class: 'label' %>
+        <div class="control">
+          <%= form.text_field :name %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :prefecture_id, class: 'label' %>
+        <div class="control">
+          <%= form.collection_select :prefecture_id, Prefecture.all, :id, :name, { prompt: "都道府県を選択" }, { class: 'select' } %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :address, class: 'label' %>
+        <div class="control">
+          <%= form.text_field :address %>
+        </div>
+      </div>
+
+      <div class="field">
+        <%= form.label :website, class: 'label' %>
+        <div class="control">
+          <%= form.text_field :website %>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <%= form.submit action_name == 'new' ? t('defaults.post_register') : t('defaults.update'), class: 'button is-primary' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

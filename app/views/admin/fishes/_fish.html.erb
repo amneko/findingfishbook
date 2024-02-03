@@ -1,0 +1,14 @@
+<div class="column is-one-quarter">
+  <div class="card">
+    <header class="card-header">
+      <p class="card-header-title is-centered">
+        <%= link_to fish.name, admin_fish_path(fish) %>
+      </p>
+    </header>
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <%= image_tag fish.image_url %>
+      </figure>
+    </div>
+  </div>
+</div>
