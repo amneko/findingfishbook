@@ -19,8 +19,16 @@
           <%= link_to t('activerecord.models.aquarium'), admin_aquariums_path, class: 'navbar-item' %>
         </div>
         <div class="navbar-end">
-          <div id="navMenu" class="navbar-menu is-right">
-            <%= link_to t('defaults.logout'), admin_logout_path, class: 'navbar-item', data: { turbo_method: :delete } %>
+          <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link is-flex" id="header-profile">
+            <%= image_tag current_user.icon.url, class: 'is-rounded mr-2' %>
+            <%= current_user.name %>
+          </a>
+
+          <div class="navbar-dropdown is-right">
+            <div id="navMenu" class="navbar-menu is-right">
+              <%= link_to t('defaults.logout'), admin_logout_path, class: 'navbar-item', data: { turbo_method: :delete } %>
+            </div>
           </div>
         </div>
       </div>

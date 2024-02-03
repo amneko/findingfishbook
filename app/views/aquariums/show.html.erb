@@ -9,6 +9,14 @@
 </section>
 <section class="section">
   <div class="container">
+    <div class="columns is-mobile is-multiline">
+      <div class="column is-full">
+        <div class="is-pulled-right mb-4">
+          <%= link_to t('aquarium_maps.index.title'), map_path, class: "button is-info is-outlined" %>
+          <%= link_to t('aquariums.index.title'), aquariums_path, class: "button is-info is-outlined" %>
+        </div>
+      </div>
+    </div>
     <div class="columns">
       <div class="column">
         <div class="content">
@@ -34,6 +42,7 @@
     </div>
   </div>
 </section>
+<%= render partial: 'map' %>
 <hr class="mx-5">
 <section class="section">
   <div class="container">

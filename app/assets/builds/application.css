@@ -10297,7 +10297,46 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background-color: #ffdbed;
 }
 
-#map {
-  height: 80vh;
+.aquarium-maps {
   width: 100%;
+  height: 80vh;
+}
+
+.map-show {
+  width: 50%;
+  height: 50vh;
+}
+
+.card.post {
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+}
+
+.card-content.post {
+  flex-grow: 1;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-burger {
+  order: 1;
+}
+
+.navbar-item.brand-text {
+  order: 0;
+}
+
+.card.is-shady.top {
+  display: flex;
+  flex-direction: column;
+  min-height: 340px;
+}
+
+.card-content.top {
+  flex-grow: 1;
 }

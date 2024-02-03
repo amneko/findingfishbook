@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="columns">
+    <div class="column mb-5">
+      <%= search_form_for @q, html: { data: { turbo_frame: "aquarium-list" } } do |f| %>
+        <div class="control has-icons-left">
+          <div class="select is-info">
+            <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '都道府県を選択' %>
+            <div class="icon is-small is-left">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <%= f.submit t('defaults.search'), class: 'button is-info' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
