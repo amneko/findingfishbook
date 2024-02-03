@@ -33,9 +33,9 @@
         <p>
           <%= t('posts.index.shooting_date') %> : <%= post.shooting_date.strftime('%Y年%m月%d日') %>
         </p>
-        <div class="buttons">
-          <%= link_to post.fish.name, fish_path(post.fish), class: 'button is-link is-rounded has-text-white', data: { turbo: false } %>
-          <%= link_to post.aquarium.name, aquarium_path(post.aquarium), class: 'button is-link is-rounded has-text-white', data: { turbo: false } %>
+        <div class="tags">
+          <%= link_to post.fish.name, fish_path(post.fish), class: 'tag is-small is-link is-light is-rounded', data: { turbo: false } %>
+          <%= link_to post.aquarium.name, aquarium_path(post.aquarium), class: 'tag is-small is-link is-light is-rounded', data: { turbo: false } %>
         </div>
         <p>
           <%= link_to t('posts.index.show_post'), post_path(post), class: "button is-info is-outlined", data: { turbo: false } %>
