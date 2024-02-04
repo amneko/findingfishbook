@@ -307,6 +307,8 @@ GEM
       net-pop
       net-smtp
     marcel (1.0.2)
+    meta-tags (2.20.0)
+      actionpack (>= 6.0.0, < 7.2)
     mime-types (3.5.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2023.1205)
@@ -533,6 +535,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   letter_opener_web (~> 2.0)
+  meta-tags
   mini_magick
   pg
   puma (>= 5.0)
