@@ -257,6 +257,7 @@ GEM
       google-protobuf (~> 3.25)
       googleapis-common-protos-types (~> 1.0)
     hashie (5.0.0)
+    high_voltage (3.1.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -531,6 +532,7 @@ DEPENDENCIES
   fog-aws
   geocoder
   google-cloud-vision
+  high_voltage
   importmap-rails
   jbuilder
   kaminari

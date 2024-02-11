@@ -1,12 +1,14 @@
 <footer class='footer'>
   <div class="content has-text-centered">
-    <nav class="level">
+    <nav class="level is-mobile">
       <div class="level-item has-text-centered">
+        <%= link_to t('defaults.terms'), page_path('terms') %>
+        <%= link_to t('defaults.privacypolicy'), page_path('privacypolicy'), class: "mx-4" %>
         <%= link_to t('contacts.title'), contacts_path %>
       </div>
     </nav>
-    <div>
-      &copy; 2023. Finding Fish Book
+    <div class="content has-text-centered">
+      &copy; 2024. Finding Fish Book
     </div>
   </div>
 </footer>
