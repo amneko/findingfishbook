@@ -6,7 +6,7 @@ class AquariumsController < ApplicationController
 
   def index
     @q = Aquarium.ransack(params[:q])
-    @aquariums = @q.result.includes(:prefecture)
+    @aquariums = @q.result.includes(:prefecture).order(id: :asc)
   end
 
   def show
