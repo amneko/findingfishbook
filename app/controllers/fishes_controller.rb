@@ -5,7 +5,7 @@ class FishesController < ApplicationController
   skip_before_action :require_login, only: %i[index]
 
   def index
-    @fishes = Fish.includes(:location).all
+    @fishes = Fish.includes(:location).all.order(id: :asc)
   end
 
   def show
