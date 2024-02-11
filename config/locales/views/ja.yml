@@ -22,6 +22,8 @@ ja:
     request: '申請'
     reset: 'リセット'
     admin_login: '管理画面ログイン'
+    terms: '利用規約'
+    privacypolicy: 'プライバシーポリシー'
     message:
       require_login: 'ログインしてください'
       update: 'ユーザーを更新しました'
