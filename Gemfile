@@ -100,6 +100,11 @@ group :development, :test do
   gem 'rubocop-checkstyle_formatter'
   gem 'rspec-rails'
   gem 'rspec_junit_formatter'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'capybara'
+  gem 'webdrivers'
+  gem 'shoulda-matchers'
   gem 'erb_lint', require: false
 end
 
