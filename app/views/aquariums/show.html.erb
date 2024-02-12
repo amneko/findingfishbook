@@ -34,9 +34,11 @@
       <div class="column">
         <div class="content">
           <h4><%= t('aquariums.show.encounter_fish') %></h4>
+          <div class="tags">
             <% @fish_in_aquarium.each do |fishes| %>
-              <%= link_to fishes.fish.name, fish_path(fishes.fish), class: 'button is-link is-rounded has-text-white' %>
+              <%= link_to fishes.fish.name, fish_path(fishes.fish), class: 'tag is-medium is-link is-light is-rounded' %>
             <% end %>
+          </div>
         </div>
       </div>
     </div>

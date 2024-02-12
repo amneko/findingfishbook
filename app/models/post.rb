@@ -12,4 +12,8 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :like_users, through: :likes, source: :user
   has_many :comments, dependent: :destroy
+
+  validates :user_id, presence: true
+  validates :fish_id, presence: true
+  validates :aquarium_id, presence: true
 end
