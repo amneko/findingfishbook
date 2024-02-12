@@ -7,6 +7,8 @@ class Aquarium < ApplicationRecord
   belongs_to :prefecture
   has_many :posts
 
+  validates :name, :prefecture_id, :address, presence: true
+
   def self.ransackable_attributes(_auth_object = nil)
     %w[name prefecture_id]
   end
