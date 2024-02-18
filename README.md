@@ -79,6 +79,10 @@ Finding Fish Bookは、任天堂のゲームソフト『あつまれ どうぶ�
 * API
     * Google Cloud Vision API：魚の画像診断用。
         https://cloud.google.com/vision?hl=ja
+    * Maps JavaScript API
+        https://developers.google.com/maps/documentation/javascript/overview?hl=ja
+    * Geocoding API
+        https://developers.google.com/maps/documentation/javascript/geocoding?hl=ja
 * フロントエンド
     * Vue.jsを検討していたが必要な場面がなかったため今回は導入を見送り。
 * デプロイ先：Herokuを使用。
