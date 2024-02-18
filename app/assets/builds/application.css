@@ -10289,13 +10289,13 @@ body {
   font-weight: 400;
   font-style: normal;
   background-color: #fef9e5;
-  color: #8b7965;
+  color: #806c4f;
 }
 
 hr,
 hr.mx-5,
 hr.my-2 {
-  background-color: #8b7965;
+  background-color: #806c4f;
 }
 
 p,
@@ -10303,6 +10303,8 @@ p.title.is-4,
 p.card-header-title.is-centered,
 p.subtitle.is-7,
 strong,
+th,
+td,
 h1.title,
 h1.title.is-2.has-text-centered,
 h2,
@@ -10315,13 +10317,14 @@ h4.fish-info,
 h4.aquarium-info,
 h4.has-text-centered,
 strong.post-column,
+span.aquarium-column,
 span.coelacanth-info,
 .label,
 .pagination-link,
 .pagination-previous,
 .pagination-next,
 .navbar-item {
-  color: #8b7965;
+  color: #806c4f;
 }
 
 h2.fish-name,
