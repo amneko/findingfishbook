@@ -3,11 +3,11 @@
     <header class="card-header">
       <button class="card-header-icon" aria-label="icon">
         <span class="icon">
-          <i class="fa-solid fa-fish-fins" aria-hidden="true"></i>
+          <i class="fa-solid fa-fish-fins has-text-info" aria-hidden="true"></i>
         </span>
       </button>
       <p class="card-header-title is-centered">
-        <%= link_to fish.name, fish_path(fish) %>
+        <%= link_to fish.name, fish_path(fish), class: "has-text-info" %>
       </p>
     </header>
     <div class="card-image">

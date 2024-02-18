@@ -11,9 +11,9 @@
     <% @aquariums.order(:id).each do |aquarium| %>
       <tr>
         <td><%= aquarium.id %></td>
-        <td><%= link_to aquarium.name, aquarium_path(aquarium), data: { turbo: false } %></td>
+        <td><%= link_to aquarium.name, aquarium_path(aquarium), data: { turbo: false }, class: "has-text-info" %></td>
         <td><%= aquarium.address %></td>
-        <td><%= link_to t('defaults.aquarium.website'), aquarium.website %></td>
+        <td><%= link_to t('defaults.aquarium.website'), aquarium.website, class: "has-text-info" %></td>
       </tr>
     <% end %>
   </tbody>

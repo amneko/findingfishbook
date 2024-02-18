@@ -1,8 +1,8 @@
-<section class="hero is-light">
+<section class="hero" id="aquarium-title">
   <div class="container">
     <div class="content">
       <div class="mt-3 mb-3">
-        <h2><%= @aquarium.name %></h2>
+        <h2 class="aquarium-name"><%= @aquarium.name %></h2>
       </div>
     </div>
   </div>
@@ -20,20 +20,20 @@
     <div class="columns">
       <div class="column">
         <div class="content">
-          <h4><%= t('defaults.aquarium.info') %></h4>
+          <h4 class="aquarium-info"><%= t('defaults.aquarium.info') %></h4>
           <ul>
             <li>
               <strong><%= t('defaults.aquarium.address') %> : <%= @aquarium.address %></strong>
             </li>
             <li>
-              <strong><%= link_to t('defaults.aquarium.website'), @aquarium.website %></strong>
+              <strong><%= link_to t('defaults.aquarium.website'), @aquarium.website, class: 'has-text-info' %></strong>
             </li>
           </ul>
         </div>
       </div>
       <div class="column">
         <div class="content">
-          <h4><%= t('aquariums.show.encounter_fish') %></h4>
+          <h4 class="aquarium-info"><%= t('aquariums.show.encounter_fish') %></h4>
           <div class="tags">
             <% @fish_in_aquarium.each do |fishes| %>
               <%= link_to fishes.fish.name, fish_path(fishes.fish), class: 'tag is-medium is-link is-light is-rounded' %>
@@ -50,14 +50,14 @@
   <div class="container">
     <div class="content has-text-centered">
       <div class="my-3 mx-3">
-        <h2><%= t('defaults.everyones_post') %></h2>
+        <h2 class="aquarium-info"><%= t('defaults.everyones_post') %></h2>
       </div>
     </div>
     <div class="columns is-multiline">
       <% @post_with_aquarium.each do |posts| %>
         <div class="column is-one-quarter">
           <div class="card my-4 mx-4">
-            <div class="card-image my-3 mx-3">
+            <div class="card-image">
               <figure class="image is-4by3">
                 <%= image_tag posts.post_image_url %>
               </figure>

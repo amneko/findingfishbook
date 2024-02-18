@@ -8,7 +8,7 @@
           </figure>
         </div>
         <div class="column is-6 is-offset-1">
-          <h1 class="title is-2">
+          <h1 class="title is-2" id="service-title">
             Finding Fish Book
           </h1>
           <h2 class="subtitle is-5">
@@ -20,14 +20,14 @@
   </div>
 </section>
 
-<section class="hero is-light">
+<section class="hero">
   <div class="box has-text-centered mt-4 mx-4">
     <h2 class="title">使用方法</h2>
   </div>
   <div class="columns mx-4">
     <div class="column is-4">
       <div class="card is-shady top">
-        <div class="card-image has-text-centered">
+        <div class="card-image has-text-centered" id="top-image-icon">
           <i class="fa-solid fa-images is-size-1 mt-5"></i>
         </div>
         <div class="card-content top">
@@ -36,15 +36,16 @@
             <p>
               水族館で撮影した魚の写真を投稿可能です。<br>
               魚はあつまれどうぶつの森に出現する魚から選択します。<br>
-              水族館は日本全国の水族館から選択可能です。</p>
-            <p><%= link_to '投稿一覧へ', posts_path, class: 'has-text-link' %></p>
+              水族館は日本全国の水族館から選択可能です。
+            </p>
+            <%= link_to '投稿一覧へ', posts_path, class: 'has-text-info' %>
           </div>
         </div>
       </div>
     </div>
     <div class="column is-4">
         <div class="card is-shady top">
-            <div class="card-image has-text-centered">
+            <div class="card-image has-text-centered" id="top-fish-icon">
               <i class="fa-solid fa-fish-fins is-size-1 mt-5"></i>
             </div>
             <div class="card-content top">
@@ -55,14 +56,14 @@
                     各魚の詳細画面では、その魚の投稿や見ることができる水族館を掲載しています。<br>
                     また、魚に関するゲーム内の情報も掲載しています。
                   </p>
-                  <%= link_to '魚一覧へ', fishes_path, class: 'has-text-link' %>
+                  <%= link_to '魚一覧へ', fishes_path, class: 'has-text-info' %>
               </div>
             </div>
         </div>
     </div>
     <div class="column is-4">
       <div class="card is-shady top">
-          <div class="card-image has-text-centered">
+          <div class="card-image has-text-centered" id="top-aquarium-icon">
             <i class="fa-solid fa-city is-size-1 mt-5"></i>
           </div>
           <div class="card-content top">
@@ -73,21 +74,20 @@
                   写真投稿時に選択する水族館の情報は本一覧のものです。<br>
                   各水族館の詳細画面では、その水族館で見ることができる魚を掲載しています。
                 </p>
-                <%= link_to '水族館一覧へ', map_path, class: 'has-text-link' %>
+                <%= link_to '水族館一覧へ', map_path, class: 'has-text-info' %>
             </div>
           </div>
       </div>
     </div>
   </div>
-  <hr>
 
-  <div class="tile is-parent mx-4">
+  <div class="tile is-parent mt-6 mx-4">
     <div class="tile is-child notification is-info">
       <div class="box">
         <p class="has-text-centered">
-          <span class="tag is-primary">あつ森ユーザー向け</span>
+          <span class="tag">あつ森ユーザー向け</span>
           <strong>あつまれどうぶつの森の北半球で今釣れる魚</strong>
-          <i class="fa-regular fa-circle-down"></i>
+          <i class="fa-solid fa-fish-fins"></i>
         </p>
       </div>
       <div class="columns">
@@ -102,12 +102,12 @@
               <div class="card-content">
                 <div class="content">
                   <% fishes.each do |fish| %>
-                    <%= link_to fish.name, fish_path(fish), class: 'has-text-link' %>
+                    <%= link_to fish.name, fish_path(fish), class: 'has-text-info' %>
                     <% if fish.selling_price_tanuki >= 10000 %>
                       <i class="fa-solid fa-sack-dollar has-text-warning"></i>
                     <% end %>
                     <% if fish.name == "シーラカンス" %>
-                      ※雨/雪の日のみ
+                      <span class="coelacanth-info">※雨/雪の日のみ</span>
                     <% end %>
                     <br>
                   <% end %>
@@ -117,7 +117,7 @@
           </div>
         <% end %>
       </div>
-      <p>
+      <p class="has-text-white">
         <i class="fa-solid fa-circle-info"></i>
         たぬき商店での売値が10000ベル以上の魚には<i class="fa-solid fa-sack-dollar has-text-warning"></i>をつけています。
       </p>

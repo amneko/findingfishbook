@@ -24,7 +24,7 @@
         <%= link_to t('aquarium_maps.index.chubu'), map_chubu_path, class: "button is-ghost map-chubu", data: { turbo: false } %>
       </div>
       <div class="column">
-        <%= link_to t('aquarium_maps.index.kinki'), map_kinki_path, class: "button is-warning is-light", data: { turbo: false } %>
+        <%= link_to t('aquarium_maps.index.kinki'), map_kinki_path, class: "button is-warning is-light is-outlined", data: { turbo: false } %>
       </div>
       <div class="column">
         <%= link_to t('aquarium_maps.index.chugoku'), map_chugoku_path, class: "button is-ghost map-chugoku", data: { turbo: false } %>
@@ -41,8 +41,10 @@
     </div>
     <div class="columns">
       <div class="column">
-        <i class="fa-regular fa-circle-up"></i>
-        ボタンをクリックすると各地域のMAPに移動します。
+        <p>
+          <i class="fa-regular fa-circle-up"></i>
+          ボタンをクリックすると各地域のMAPに移動します。
+        </p>
       </div>
     </div>
   </div>
