@@ -101,7 +101,7 @@
               </header>
               <div class="card-content">
                 <div class="content">
-                  <% fishes.each do |fish| %>
+                  <% fishes.sort_by(&:id).each do |fish| %>
                     <%= link_to fish.name, fish_path(fish), class: 'has-text-info' %>
                     <% if fish.selling_price_tanuki >= 10000 %>
                       <i class="fa-solid fa-sack-dollar has-text-warning"></i>
