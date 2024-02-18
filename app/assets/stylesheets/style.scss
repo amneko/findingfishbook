@@ -1,0 +1,64 @@
+body {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #fef9e5;
+  color: #8b7965;
+}
+
+hr,
+hr.mx-5,
+hr.my-2 {
+  background-color: #8b7965;
+}
+
+p,
+p.title.is-4,
+p.card-header-title.is-centered,
+p.subtitle.is-7,
+strong,
+h1.title,
+h1.title.is-2.has-text-centered,
+h2,
+h2.title,
+h2.fish-info,
+h2.aquarium-info,
+h2.comment-title,
+h4,
+h4.fish-info,
+h4.aquarium-info,
+h4.has-text-centered,
+strong.post-column,
+span.coelacanth-info,
+.label,
+.pagination-link,
+.pagination-previous,
+.pagination-next,
+.navbar-item {
+  color: #8b7965;
+}
+
+h2.fish-name,
+h2.aquarium-name,
+h2.map-name {
+  color: #846047;
+}
+
+span.tag,
+a.tag.is-small.is-rounded,
+a.tag.is-medium.is-light.is-rounded {
+  background-color: #0cc5b5;
+  color: #ffffff;
+}
+
+#service-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+#map-title,
+#fish-title,
+#aquarium-title {
+ background-color: #f5ecc5;
+}

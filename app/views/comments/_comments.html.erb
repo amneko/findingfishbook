@@ -17,7 +17,7 @@
           <div class="content">
             <p class="subtitle is-7"><%= comment.user.name %></p>
             <%= turbo_frame_tag "edit_comment_#{comment.id}" do %>
-              <p><%= comment.body %></p>
+              <strong><%= comment.body %></strong>
             <% end %>
           </div>
         </div>

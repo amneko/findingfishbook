@@ -1,14 +1,14 @@
-<footer class='footer'>
+<footer class='footer has-background-white'>
   <div class="content has-text-centered">
     <nav class="level is-mobile">
       <div class="level-item has-text-centered">
-        <%= link_to t('defaults.terms'), page_path('terms') %>
-        <%= link_to t('defaults.privacypolicy'), page_path('privacypolicy'), class: "mx-4" %>
-        <%= link_to t('contacts.title'), contacts_path %>
+        <%= link_to t('defaults.terms'), page_path('terms'), class: "has-text-info" %>
+        <%= link_to t('defaults.privacypolicy'), page_path('privacypolicy'), class: "mx-4 has-text-info" %>
+        <%= link_to t('contacts.title'), contacts_path, class: "has-text-info" %>
       </div>
     </nav>
     <div class="content has-text-centered">
-      &copy; 2024. Finding Fish Book
+      <p>&copy; 2024. Finding Fish Book</p>
     </div>
   </div>
 </footer>
