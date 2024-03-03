@@ -135,13 +135,13 @@ https://www.findingfishbook.com/
 | [![Image from Gyazo](https://i.gyazo.com/d7e7e7b420d0d74cb898d37d0a5591b4.png)](https://gyazo.com/d7e7e7b420d0d74cb898d37d0a5591b4) | [![Image from Gyazo](https://i.gyazo.com/1f75994c49363e56a91e251eb87039e9.png)](https://gyazo.com/1f75994c49363e56a91e251eb87039e9) |
 
 ## 使用技術
-| カテゴリ | 技術 | 備考 |
-----|----|---- 
-| バックエンド | Ruby, Ruby on Rails | 2023/11時点の最新安定バージョンを使用。 |
-| API | Google Cloud Vision API, Maps JavaScript API, Geocoding API | https://cloud.google.com/vision?hl=ja, https://developers.google.com/maps/documentation/javascript/overview?hl=ja, https://developers.google.com/maps/documentation/javascript/geocoding?hl=ja |
-| データベース | PostgreSQL | - |
-| インフラ | Heroku | - |
-| その他 | Git, GitHub | - |
+| カテゴリ | 技術 |
+----|----
+| バックエンド | Ruby, Ruby on Rails |
+| API | Google Cloud Vision API, Maps JavaScript API, Geocoding API |
+| データベース | PostgreSQL |
+| インフラ | Heroku |
+| その他 | Git, GitHub |
 
 ## インフラ構成図
 ![Image](https://github.com/users/amneko/projects/2/assets/127018216/2da93bfa-4069-4685-9010-eb31b64b54de)
