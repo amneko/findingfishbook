@@ -41,6 +41,7 @@ class PostsController < ApplicationController
 
   def likes
     @like_posts = current_user.like_posts.includes(:user).order(created_at: :desc)
+    @liked_post_ids = current_user.likes.pluck(:post_id).to_set if logged_in?
   end
 
   private

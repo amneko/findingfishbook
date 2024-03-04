@@ -4,46 +4,25 @@
 class AquariumMapsController < ApplicationController
   before_action :view_map, only: %i[hokkaido tohoku tokyo kanto chubu kinki chugoku shikoku kyushu okinawa]
 
+  PREFECTURE_IDS = {
+    hokkaido: [1],
+    tohoku: [2, 3, 4, 5, 6, 7],
+    tokyo: [13],
+    kanto: [8, 9, 10, 11, 12, 14],
+    chubu: [15, 16, 17, 18, 19, 20, 21, 22, 23],
+    kinki: [24, 25, 26, 27, 28, 29, 30],
+    chugoku: [31, 32, 33, 34, 35],
+    shikoku: [36, 37, 38, 39],
+    kyushu: [40, 41, 42, 43, 44, 45, 46],
+    okinawa: [47]
+  }.freeze
+
   def index; end
 
-  def hokkaido
-    @aquariums = Aquarium.where(prefecture_id: 1)
-  end
-
-  def tohoku
-    @aquariums = Aquarium.where(prefecture_id: [2, 3, 4, 5, 6, 7])
-  end
-
-  def tokyo
-    @aquariums = Aquarium.where(prefecture_id: 13)
-  end
-
-  def kanto
-    @aquariums = Aquarium.where(prefecture_id: [8, 9, 10, 11, 12, 14])
-  end
-
-  def chubu
-    @aquariums = Aquarium.where(prefecture_id: [15, 16, 17, 18, 19, 20, 21, 22, 23])
-  end
-
-  def kinki
-    @aquariums = Aquarium.where(prefecture_id: [24, 25, 26, 27, 28, 29, 30])
-  end
-
-  def chugoku
-    @aquariums = Aquarium.where(prefecture_id: [31, 32, 33, 34, 35])
-  end
-
-  def shikoku
-    @aquariums = Aquarium.where(prefecture_id: [36, 37, 38, 39])
-  end
-
-  def kyushu
-    @aquariums = Aquarium.where(prefecture_id: [40, 41, 42, 43, 44, 45, 46])
-  end
-
-  def okinawa
-    @aquariums = Aquarium.where(prefecture_id: [47])
+  PREFECTURE_IDS.each do |region, ids|
+    define_method(region) do
+      @aquariums = Aquarium.where(prefecture_id: ids)
+    end
   end
 
   private

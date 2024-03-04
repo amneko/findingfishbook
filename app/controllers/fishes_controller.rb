@@ -10,17 +10,7 @@ class FishesController < ApplicationController
 
   def show
     @fish = Fish.find(params[:id])
-    @aquarium_with_fish = aquarium_with_fish(@fish)
-    @post_with_fish = post_with_fish(@fish)
-  end
-
-  private
-
-  def aquarium_with_fish(fish)
-    Post.where(fish_id: fish.id).includes(:aquarium).select(:aquarium_id).distinct
-  end
-
-  def post_with_fish(fish)
-    Post.where(fish_id: fish.id)
+    @aquarium_with_fish = Post.aquariums_with_fish(@fish.id)
+    @post_with_fish = Post.with_fish(@fish.id)
   end
 end
