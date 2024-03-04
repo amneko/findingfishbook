@@ -12,19 +12,11 @@ class AquariumsController < ApplicationController
   def show
     view_map
     @aquarium = Aquarium.find(params[:id])
-    @fish_in_aquarium = fish_in_aquarium(@aquarium)
-    @post_with_aquarium = post_with_aquarium(@aquarium)
+    @fish_in_aquarium = Post.fishes_in_aquarium(@aquarium.id)
+    @post_with_aquarium = Post.with_aquarium(@aquarium.id)
   end
 
   private
-
-  def fish_in_aquarium(aquarium)
-    Post.where(aquarium_id: aquarium.id).includes(:fish).select(:fish_id).distinct
-  end
-
-  def post_with_aquarium(aquarium)
-    Post.where(aquarium_id: aquarium.id)
-  end
 
   def view_map
     @google_maps_api_url = "https://maps.googleapis.com/maps/api/js?key=#{Rails.application.config.google_maps_api_key}&callback=initMap"
